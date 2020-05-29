@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,291 +8,266 @@
     android:background="@drawable/background_gradient"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/main_title"
-        android:layout_width="54dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="153dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="153dp"
-        android:layout_marginBottom="582dp"
-        android:font-family="Roboto-regular"
-        android:gravity="left"
-        android:shadowColor="#66000000"
-        android:text="PEISP"
-        android:textColor="@android:color/background_light"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/avatars"
-        android:layout_width="74dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="230dp"
-        android:layout_marginBottom="470dp"
-        android:left="56dp"
-        android:radius="37dp"
-        android:top="96dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars[0]" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="171dp"
-        android:layout_marginTop="102dp"
-        android:layout_marginEnd="117dp"
-        android:layout_marginBottom="519dp"
-        android:font-family="SourceHanSansSC-regular"
-        android:gravity="center"
-        android:text="向文波"
-        android:textColor="#FFFFFF"
-        android:textSize="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="109dp"
-        android:layout_height="13dp"
-        android:layout_marginStart="153dp"
-        android:layout_marginTop="131dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginBottom="490dp"
-        android:alpha="0.75"
-        android:font-family="SourceHanSansSC-regular"
-        android:gravity="center"
-        android:text="工号：hc12345609"
-        android:textColor="#F5F5F5"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="153dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="471dp"
-        android:alpha="0.75"
-        android:text="职位：西一厂管理员"
-        android:textColor="#F5F5F5"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/button_view"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="22dp"
-        android:layout_marginRight="22dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
         >
 
-        <View
-            android:id="@+id/view"
+        <TextView
+            android:id="@+id/main_title"
             android:layout_width="wrap_content"
-            android:layout_height="180dp"
-            app:layout_constraintLeft_toRightOf="@id/view_1"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="208dp"
-            android:layout_marginBottom="252dp"
-            android:layout_marginLeft="8dp"
-            android:background="#5412122C"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:font-family="Roboto-regular"
+            android:shadowColor="#66000000"
+            android:text="PEISP"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
 
-        <View
-            android:id="@+id/view_1"
-            android:layout_width="wrap_content"
-            android:layout_height="180dp"
-            android:layout_marginBottom="252dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/view"
-            android:background="#5412122C"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:gravity="center"
+            >
 
-        <View
-            android:id="@+id/view_2"
-            android:layout_width="wrap_content"
-            android:layout_height="180dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/view_3"
-            app:layout_constraintTop_toBottomOf="@id/view_1"
-            android:layout_marginRight="8dp"
-            android:background="#5412122C"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatars"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/hc"
+                >
 
-        <View
-            android:id="@+id/view_3"
-            android:layout_width="wrap_content"
-            android:layout_height="180dp"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/view_2"
-            app:layout_constraintTop_toBottomOf="@id/view"
-            android:layout_marginLeft="8dp"
-            android:background="#5412122C"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            </de.hdodenhof.circleimageview.CircleImageView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="23dp"
+                >
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="284dp"
-        android:layout_marginTop="122dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="488dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/a_right" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:font-family="SourceHanSansSC-regular"
+                    android:text="向文波"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="59dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="248dp"
-        android:layout_marginEnd="231dp"
-        android:layout_marginBottom="337dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/shishijiankong" />
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:alpha="0.75"
+                    android:font-family="SourceHanSansSC-regular"
+                    android:text="工号：hc12345609"
+                    android:textColor="#F5F5F5"
+                    android:textSize="12sp" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="96dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="45dp"
-        android:text="现场实时情况"
-        android:textColor="#FFFFFF"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view_1"
-        app:layout_constraintEnd_toEndOf="@+id/view_1"
-        app:layout_constraintStart_toStartOf="@+id/view_1"
-        app:layout_constraintTop_toTopOf="@+id/view_1" />
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.75"
+                    android:text="职位：西一厂管理员"
+                    android:textColor="#F5F5F5"
+                    android:textSize="12sp" />
 
+            </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="248dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="337dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/weiguichuli" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="23dp"
+                app:srcCompat="@mipmap/a_right" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="64dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="45dp"
-        android:text="违规记录"
-        android:textColor="#FFFFFF"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        </LinearLayout>
 
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="57dp"
+            >
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="239dp"
-        android:layout_marginTop="449dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="139dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/my" />
+            <TableRow
+                android:gravity="center"
+                android:layout_weight="1"
+                >
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="64dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="45dp"
-        android:text="管理名单"
-        android:textColor="#FFFFFF"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view_3"
-        app:layout_constraintEnd_toEndOf="@+id/view_3"
-        app:layout_constraintStart_toStartOf="@+id/view_3"
-        app:layout_constraintTop_toTopOf="@+id/view_3" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card1"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="7.5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="#5412122C"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    >
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="445dp"
-        android:layout_marginEnd="231dp"
-        android:layout_marginBottom="135dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/my" />
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="59dp"
+                            android:layout_height="55dp"
+                            app:srcCompat="@mipmap/shishijiankong" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="64dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="45dp"
-        android:text="出勤记录"
-        android:textColor="#FFFFFF"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view_2"
-        app:layout_constraintEnd_toEndOf="@+id/view_2"
-        app:layout_constraintStart_toStartOf="@+id/view_2"
-        app:layout_constraintTop_toTopOf="@+id/view_2" />
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="96dp"
+                            android:layout_height="19dp"
+                            android:layout_marginTop="21dp"
+                            android:gravity="center"
+                            android:text="现场实时情况"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card2"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="7.5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="#5412122C"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:id="@+id/violation_record_iv"
+                            android:layout_width="59dp"
+                            android:layout_height="55dp"
+                            app:srcCompat="@mipmap/weiguichuli" />
+
+                        <TextView
+                            android:id="@+id/violation_record_tv"
+                            android:layout_width="96dp"
+                            android:layout_height="19dp"
+                            android:layout_marginTop="21dp"
+                            android:gravity="center"
+                            android:text="违规记录"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </TableRow>
+
+            <TableRow
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card3"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="7.5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="#5412122C"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:id="@+id/attendance_record_iv"
+                            android:layout_width="59dp"
+                            android:layout_height="55dp"
+                            app:srcCompat="@mipmap/recard" />
+
+                        <TextView
+                            android:id="@+id/attendance_record_tv"
+                            android:layout_width="96dp"
+                            android:layout_height="19dp"
+                            android:layout_marginTop="21dp"
+                            android:gravity="center"
+                            android:text="出勤记录"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card4"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="7.5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="#5412122C"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        >
+
+                        <ImageView
+                            android:id="@+id/admin_iv"
+                            android:layout_width="59dp"
+                            android:layout_height="55dp"
+                            app:srcCompat="@mipmap/my" />
+
+                        <TextView
+                            android:id="@+id/admin_tv"
+                            android:layout_width="96dp"
+                            android:layout_height="19dp"
+                            android:layout_marginTop="21dp"
+                            android:gravity="center"
+                            android:text="管理名单"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
