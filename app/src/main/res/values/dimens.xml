@@ -2,4 +2,5 @@
 <resources>
     <dimen name="screen_height">640px</dimen>
     <dimen name="screen_width">360px</dimen>
+    <dimen name="dp_0.5">0.5dp</dimen>
 </resources>

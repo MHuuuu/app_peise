@@ -24,7 +24,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:font-family="Roboto-regular"
             android:shadowColor="#66000000"
             android:text="PEISP"
             android:textColor="@android:color/background_light"
@@ -60,7 +59,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:font-family="SourceHanSansSC-regular"
                     android:text="向文波"
                     android:textColor="#FFFFFF"
                     android:textSize="24sp" />
@@ -71,7 +69,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:alpha="0.75"
-                    android:font-family="SourceHanSansSC-regular"
                     android:text="工号：hc12345609"
                     android:textColor="#F5F5F5"
                     android:textSize="12sp" />
