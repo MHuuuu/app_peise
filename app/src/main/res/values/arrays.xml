@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="attendance_record">
+        <item>全部</item>
+        <item>装配车间A</item>
+        <item>装配车间B</item>
+        <item>生产车间A</item>
+        <item>生产车间B</item>
+        <item>生产车间C</item>
+    </string-array>
+</resources>
