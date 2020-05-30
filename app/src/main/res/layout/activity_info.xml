@@ -326,7 +326,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="6"
-                    android:text="2012-03"
+                    android:text="2020-03"
                     android:textColor="@color/font_color" />
             </LinearLayout>
 
