@@ -195,14 +195,20 @@
                         </RadioGroup>
 
 
+
                         <Button
                             android:id="@+id/btn_date_picker"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="150dp"
+                            android:layout_height="36dp"
                             android:layout_alignTop="@id/rg_date_switch"
                             android:layout_alignBottom="@id/rg_date_switch"
                             android:layout_alignParentRight="true"
-                            android:text="selected_date" />
+                            android:textSize="14sp"
+                            android:textColor="#12122C"
+                            android:text="selected_date"
+                            android:background="@drawable/button_date_select">
+
+                        </Button>
 
                     </RelativeLayout>
 
