@@ -1,0 +1,47 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="cn.pedant.SweetAlert.sample"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:6:5-46
+8        android:minSdkVersion="14"
+8-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:6:5-46
+9        android:targetSdkVersion="21" />
+9-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:6:15-44
+10
+11    <application
+11-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:7:5-15:19
+12        android:allowBackup="true"
+12-->[com.pnikosis:materialish-progress:1.0] /Users/chenyang/.gradle/caches/transforms-2/files-2.1/7f64f6919b001983ceba45733b155fa7/materialish-progress-1.0/AndroidManifest.xml:12:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.0.0] /Users/chenyang/.gradle/caches/transforms-2/files-2.1/ec609e8cee787e2dff3592c66b08a66a/core-1.0.0/AndroidManifest.xml:22:18-86
+14        android:debuggable="true"
+15        android:icon="@drawable/ic_launcher"
+15-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:7:51-87
+16        android:label="@string/app_name"
+16-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:7:18-50
+17        android:testOnly="true"
+18        android:theme="@android:style/Theme.NoTitleBar" >
+18-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:7:88-135
+19        <activity
+19-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:8:9-14:20
+20            android:name="cn.pedant.SweetAlert.sample.SampleActivity"
+20-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:8:19-49
+21            android:label="@string/app_name" >
+21-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:9:19-51
+22            <intent-filter>
+22-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:10:13-13:29
+23                <action android:name="android.intent.action.MAIN" />
+23-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:11:17-68
+23-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:11:25-66
+24
+25                <category android:name="android.intent.category.LAUNCHER" />
+25-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:12:17-76
+25-->/Users/chenyang/AndroidStudioProjects/app_peise/sample/src/main/AndroidManifest.xml:12:27-74
+26            </intent-filter>
+27        </activity>
+28    </application>
+29
+30</manifest>
