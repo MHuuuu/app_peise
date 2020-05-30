@@ -62,11 +62,11 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="wrap_content"
         android:paddingStart="26dp"
         android:paddingTop="25dp"
         android:paddingEnd="24dp"
-        android:paddingBottom="17dp"
+        android:paddingBottom="15dp"
         app:columnCount="4"
         app:orientation="horizontal"
         app:rowCount="3">
