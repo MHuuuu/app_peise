@@ -87,7 +87,8 @@
                 android:layout_marginBottom="10dp"
                 android:text="向文波·高级技师"
                 android:textColor="@android:color/background_dark"
-                android:textSize="20dp" />
+                android:textSize="14sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/textView4"
@@ -97,19 +98,29 @@
                 android:alpha="0.75"
                 android:text="工号：hc12345609"
                 android:textColor="@android:color/background_dark"
-                android:textSize="14dp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
-        <Button
+        <RelativeLayout
             android:id="@+id/button9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
             android:layout_alignTop="@id/avatars"
             android:layout_alignParentTop="false"
             android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="22dp"
-            android:text="处理" />
+            android:gravity="center"
+            android:background="@drawable/execute_button_shape">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="处理"
+                android:textSize="12sp"
+                android:textColor="@color/white">
+            </TextView>
+        </RelativeLayout>
     </RelativeLayout>
 
     <LinearLayout
@@ -130,8 +141,9 @@
                 android:layout_marginStart="31dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="TextView"
-                android:textSize="20dp" />
+                android:text="违规类型"
+                android:textSize="14sp"
+                android:textColor="@color/text_black" />
 
             <EditText
                 android:id="@+id/editText"
@@ -145,15 +157,16 @@
                 android:layout_marginTop="-10dp"
                 android:layout_marginEnd="75dp"
                 android:layout_marginBottom="-10dp"
-                android:background="#27424242"
+                android:background="@drawable/edit_shape"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="未。。。" />
+                android:text="  未佩戴安全帽"
+                android:textColor="@color/text_black" />
 
             <ImageButton
                 android:id="@+id/imageButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
                 android:layout_alignTop="@id/textView29"
                 android:layout_alignBottom="@id/textView29"
                 android:layout_alignParentEnd="true"
@@ -178,8 +191,9 @@
                 android:layout_marginStart="31dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="TextView"
-                android:textSize="20dp" />
+                android:text="违规时间"
+                android:textSize="14sp"
+                android:textColor="@color/text_black"  />
 
             <EditText
                 android:id="@+id/editText2"
@@ -193,15 +207,16 @@
                 android:layout_marginTop="-10dp"
                 android:layout_marginEnd="75dp"
                 android:layout_marginBottom="-10dp"
-                android:background="#27424242"
+                android:background="@drawable/edit_shape"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="2020-03-01 13：01" />
+                android:text="  2020-03-01 13:01"
+                android:textColor="@color/text_black" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
                 android:layout_alignTop="@id/textView30"
                 android:layout_alignBottom="@id/textView30"
                 android:layout_alignParentEnd="true"

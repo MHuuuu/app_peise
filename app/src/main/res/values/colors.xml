@@ -27,4 +27,5 @@
     <color name="background">#F5F5F5</color>
     <color name="search_view">#5412122C</color>
     <color name="search_view_text">#EEEEEE</color>
+    <color name="execute_button">#F25555</color>
 </resources>
