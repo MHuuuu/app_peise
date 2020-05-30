@@ -16,25 +16,27 @@ import java.util.List;
 
 public class WorkDetailActivity extends AppCompatActivity {
     private ImageView mIvBack;
-    private WorkerDetailAdapter wdAdapter1, wdAdapter2;
+    private WorkerDetailAdapter wdAdapter1,wdAdapter2;
+
 
     private ListView mWgList;
     private ListView mKqList;
 
     private List<String[]> illRecords = new ArrayList<String[]>() {
         {
-            add(new String[]{"2020-03-01", "未佩戴安全帽"});
-            add(new String[]{"2020-03-02", "未佩戴安全帽"});
-            add(new String[]{"2020-03-03", "未佩戴安全帽"});
-            add(new String[]{"2020-03-04", "未佩戴安全帽"});
+            add(new String[]{"1","2020-03-01", "未佩戴安全帽"});
+            add(new String[]{"0","2020-03-02", "未佩戴安全帽"});
+            add(new String[]{"0","2020-03-03", "未佩戴安全帽"});
+            add(new String[]{"1","2020-03-04", "未佩戴安全帽"});
         }
     };
+
     private List<String[]> attRecords = new ArrayList<String[]>() {
         {
-            add(new String[]{"2020-03-01", "迟到"});
-            add(new String[]{"2020-03-02", "缺勤"});
-            add(new String[]{"2020-03-03", "迟到"});
-            add(new String[]{"2020-03-04", "早退"});
+            add(new String[]{"0","2020-03-01", "迟到"});
+            add(new String[]{"1","2020-03-02", "缺勤"});
+            add(new String[]{"0","2020-03-03", "迟到"});
+            add(new String[]{"0","2020-03-04", "早退"});
         }
     };
 
@@ -54,16 +56,16 @@ public class WorkDetailActivity extends AppCompatActivity {
         });
     }
 
+    private void initView() {
+        mIvBack = (ImageView) findViewById(R.id.iv_back);
+        mWgList = (ListView) findViewById(R.id.wg_list);
+        mKqList = (ListView) findViewById(R.id.kq_list);
+    }
+
     private void initList() {
         wdAdapter1 = new WorkerDetailAdapter(this, illRecords);
         wdAdapter2 = new WorkerDetailAdapter(this, attRecords);
         mWgList.setAdapter(wdAdapter1);
         mKqList.setAdapter(wdAdapter2);
-    }
-
-    private void initView() {
-        mIvBack = (ImageView) findViewById(R.id.iv_back);
-        mWgList = (ListView) findViewById(R.id.wg_list);
-        mKqList = (ListView) findViewById(R.id.kq_list);
     }
 }

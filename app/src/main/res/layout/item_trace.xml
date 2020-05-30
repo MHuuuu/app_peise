@@ -44,40 +44,49 @@
         android:paddingTop="6dp">
 
         <TextView
-            android:id="@+id/tvAcceptTime"
+            android:id="@+id/tv_accept_yime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2014/06/24 20:55:28"
             android:textColor="#999"
-            android:textSize="12sp" />
+            android:textSize="18dp" />
 
         <androidx.gridlayout.widget.GridLayout
             android:id="@+id/glRecordImg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvAcceptTime">
+            android:layout_below="@id/tv_accept_yime"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp">
 
             <ImageView
-                android:id="@+id/ivAcceptStation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars[2]" />
+                android:id="@+id/iv_Ill_pic"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:scaleType="fitXY"
+                tools:srcCompat="@drawable/nohat2" />
+
+            <Space
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
 
             <ImageView
-                android:id="@+id/ivAcceptStation3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars[2]" />
+                android:id="@+id/iv_Ill_pic_2"
+                android:layout_width="90dp"
+                android:layout_height="120dp"
+                android:scaleType="fitXY"
+                tools:srcCompat="@drawable/nohat3" />
 
         </androidx.gridlayout.widget.GridLayout>
 
         <TextView
-            android:id="@+id/tvAcceptStation"
+            android:id="@+id/tv_accept_station"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/glRecordImg"
             android:layout_marginTop="5dp"
-            android:text="快件在 深圳 ,准备送往下一站 深圳集散中心 [深圳市]"
             android:textColor="#999"
             android:textSize="12sp" />
 

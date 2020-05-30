@@ -19,10 +19,17 @@ public class WorkerDetailAdapter extends BaseAdapter {
 
     private Context context;
     private List<String[]> data;
+    boolean isMainList;
 
     public WorkerDetailAdapter(Context c,List<String[]> data) {
         this.context = c;
         this.data = data;
+        this.isMainList=true;
+    }
+    public WorkerDetailAdapter(Context c,List<String[]> data, boolean isMainList) {
+        this.context = c;
+        this.data = data;
+        this.isMainList=isMainList;
     }
 
     public WorkerDetailAdapter(Context c) {
@@ -55,6 +62,7 @@ public class WorkerDetailAdapter extends BaseAdapter {
         // 重用convertView
         if (convertView == null) {
             holder = new ViewHolder();
+
             convertView = LayoutInflater.from(context).inflate(R.layout.item_worker_detail_list_common, viewGroup,false);
             holder.ivState = (ImageView) convertView.findViewById(R.id.iv_state);
             holder.tvTime = (TextView) convertView.findViewById(R.id.tv_time);
@@ -65,8 +73,10 @@ public class WorkerDetailAdapter extends BaseAdapter {
         }
         // 适配数据
 //        holder.ivState.setText(data.get(i).getWorker().getName());
-        holder.tvTime.setText(data.get(i)[0]);
-        holder.tvInfo.setText(data.get(i)[1]);
+
+        holder.ivState.setVisibility(data.get(i)[0].equals("1")?View.VISIBLE:View.INVISIBLE);
+        holder.tvTime.setText(data.get(i)[1]);
+        holder.tvInfo.setText(data.get(i)[2]);
 
         return convertView;
     }

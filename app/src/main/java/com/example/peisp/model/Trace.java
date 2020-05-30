@@ -1,17 +1,31 @@
 package com.example.peisp.model;
 
 public class Trace {
-    /** 时间 */
+    private String[] imgIds;
+    /**
+     * 时间
+     */
     private String acceptTime;
-    /** 描述 */
+    /**
+     * 描述、备注
+     */
     private String acceptStation;
 
     public Trace() {
     }
 
-    public Trace(String acceptTime, String acceptStation) {
+    public Trace(String[] imgIds, String acceptTime, String acceptStation) {
+        this.imgIds = imgIds;
         this.acceptTime = acceptTime;
         this.acceptStation = acceptStation;
+    }
+
+    public String[] getImgIds() {
+        return imgIds;
+    }
+
+    public void setImgIds(String[] imgIds) {
+        this.imgIds = imgIds;
     }
 
     public String getAcceptTime() {

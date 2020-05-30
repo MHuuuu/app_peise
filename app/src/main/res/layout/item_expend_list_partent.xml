@@ -41,7 +41,7 @@
             android:layout_marginStart="10dp"
             android:layout_toRightOf="@id/label_dep_name"
             android:text="num"
-            android:textColor="@color/black_a_0.4"
+            android:textColor="@color/black"
             android:textSize="20sp" />
     </RelativeLayout>
 
