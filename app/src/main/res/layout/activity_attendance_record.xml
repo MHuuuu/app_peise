@@ -91,17 +91,17 @@
                         android:textColor="@color/text_black"
                         android:textSize="28dp" />
 
-                    <TextView
-                        android:id="@+id/textView37"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/textView34"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="15dp"
-                        android:text="正常到岗"
-                        android:textColor="@color/black_a_0.4" />
-                </RelativeLayout>
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView34"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:text="正常到岗"
+                android:textColor="@color/black" />
+        </RelativeLayout>
 
                 <Space
                     android:layout_width="10dp"
@@ -124,17 +124,17 @@
                         android:textColor="@color/text_black"
                         android:textSize="28dp" />
 
-                    <TextView
-                        android:id="@+id/textView41"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/textView40"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="15dp"
-                        android:text="迟到"
-                        android:textColor="@color/black_a_0.4" />
-                </RelativeLayout>
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView40"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:text="迟到"
+                android:textColor="@color/black" />
+        </RelativeLayout>
 
                 <Space
                     android:layout_width="10dp"
@@ -157,17 +157,17 @@
                         android:textColor="@color/text_black"
                         android:textSize="28dp" />
 
-                    <TextView
-                        android:id="@+id/textView43"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/textView42"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="15dp"
-                        android:text="缺勤"
-                        android:textColor="@color/black_a_0.4" />
-                </RelativeLayout>
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView42"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:text="缺勤"
+                android:textColor="@color/black" />
+        </RelativeLayout>
 
                 <Space
                     android:layout_width="10dp"
@@ -190,17 +190,17 @@
                         android:textColor="@color/text_black"
                         android:textSize="28dp" />
 
-                    <TextView
-                        android:id="@+id/textView45"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/textView44"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="15dp"
-                        android:text="早退"
-                        android:textColor="@color/black_a_0.4" />
-                </RelativeLayout>
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView44"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:text="早退"
+                android:textColor="@color/black"  />
+        </RelativeLayout>
 
                 <Space
                     android:layout_width="10dp"

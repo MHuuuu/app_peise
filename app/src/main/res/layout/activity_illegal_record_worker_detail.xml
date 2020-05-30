@@ -85,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="向文波·高级技师"
+                android:text="向文波·机床操作员"
                 android:textColor="@android:color/background_dark"
                 android:textSize="14sp"
                 android:textStyle="bold"/>
@@ -232,14 +232,17 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingStart="30dp"
-        android:paddingEnd="30dp">
+        android:paddingStart="35dp"
+        android:paddingEnd="90dp"
+        android:layout_marginBottom="70dp">
 
         <ImageView
             android:id="@+id/iv_ill_pic"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/backgrounds/scenic[10]" />
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/result" />
+
     </RelativeLayout>
 
 </LinearLayout>
