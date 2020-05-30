@@ -38,10 +38,14 @@ public class AttendanceAdapter extends BaseAdapter {
         }
     };
 
-    /*public IllegalWorkerListAdapter(Context c, List<IllegalRecord> data) {
+    public AttendanceAdapter(Context c, List<AttendanceRecord> data) {
         this.context = c;
         this.data = data;
-    }*/
+    }
+
+    public AttendanceAdapter(Context c) {
+        this.context = c;
+    }
 
     public void updateData(List<AttendanceRecord> data) {
         this.data = data;
@@ -69,12 +73,11 @@ public class AttendanceAdapter extends BaseAdapter {
         // 重用convertView
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = LayoutInflater.from(context).inflate(R.layout.item_attendance_list, null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_attendance_list, viewGroup,false);
             holder.iv_att_name = (TextView) convertView.findViewById(R.id.iv_att_name);
             holder.iv_att_jid = (TextView) convertView.findViewById(R.id.iv_att_jid);
             holder.iv_att_time = (TextView) convertView.findViewById(R.id.iv_att_time);
             holder.iv_att_state = (TextView) convertView.findViewById(R.id.iv_att_state);
-
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();

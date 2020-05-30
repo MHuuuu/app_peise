@@ -103,7 +103,7 @@
         </LinearLayout>
 
         <RelativeLayout
-            android:id="@+id/button9"
+            android:id="@+id/btn_check"
             android:layout_width="60dp"
             android:layout_height="25dp"
             android:layout_alignTop="@id/avatars"
@@ -237,7 +237,7 @@
         android:layout_marginBottom="70dp">
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/iv_ill_pic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"

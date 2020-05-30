@@ -1,25 +1,19 @@
 package com.example.peisp.activity;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bigkoo.pickerview.builder.TimePickerBuilder;
 import com.bigkoo.pickerview.listener.CustomListener;
-import com.bigkoo.pickerview.listener.OnTimeSelectChangeListener;
 import com.bigkoo.pickerview.listener.OnTimeSelectListener;
 import com.bigkoo.pickerview.view.TimePickerView;
 import com.example.peisp.R;
@@ -40,6 +34,7 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
     private TraceListAdapter adapter;
 
     private TimePickerView pvCustomTime;
+    private RelativeLayout mRlGoToIllWorker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +58,10 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
         mIvBack = (ImageView) findViewById(R.id.iv_back);
         mLvTrace = (ListView) findViewById(R.id.lv_trace);
         mBtnDatePicker = (Button) findViewById(R.id.btn_date_picker);
+        mRlGoToIllWorker = (RelativeLayout) findViewById(R.id.rl_go_to_ill_worker);
+
         mBtnDatePicker.setOnClickListener(this);
+        mRlGoToIllWorker.setOnClickListener(this);
     }
 
     private void initData() {
@@ -81,40 +79,6 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
         mLvTrace.setAdapter(adapter);
     }
 
-    /*
-    private void initTimePicker() {
-        final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        Calendar selectedDate = Calendar.getInstance();//系统当前时间
-        Calendar startDate = Calendar.getInstance();//控件起始时间
-        //注：（1）年份可以随便设置 (2)月份是从0开始的（0代表1月 11月代表12月），即设置0代表起始时间从1月开始
-        //(3)日期必须从1开始，因为2月没有30天，设置其他日期时，2月份会从设置日期开始显示导致出现问题
-        startDate.set(1900, 1, 1);//该控件从1900年1月1日开始
-        Calendar endDate = Calendar.getInstance();//控件截止时间
-        endDate.set(2050, 2, 28);//该控件到2050年2月28日结束
-        try {
-            String start1 = "2020-02-28";//格式必须与formatter的格式一致
-            Date date = formatter.parse(start1);
-            selectedDate.setTime(date);//指定控件初始值显示哪一天
-        } catch (Exception e) {
-
-        }
-        //时间选择器
-        TimePickerView pvTime = new TimePickerBuilder(IllegalRecordActivity.this, new OnTimeSelectListener() {
-            public void onTimeSelect(Date date, View v) {
-                String choiceTime = formatter.format(date);//日期 String
-                Toast.makeText(IllegalRecordActivity.this, choiceTime, Toast.LENGTH_LONG).show();
-                long startl = date.getTime();//日期 long
-            }
-        }).setDate(selectedDate)//设置系统时间为当前时间
-                .setRangDate(startDate, endDate)//设置控件日期范围 也可以不设置默认1900年到2100年
-                .setType(new boolean[]{true, true, true, true, true, false})//设置年月日时分秒是否显示 true:显示 false:隐藏
-                .setLabel("年", "月", "日", "时", "分", "秒")
-                .isCenterLabel(false) //是否只显示中间选中项的label文字，false则每项item全部都带有label。
-                .setDividerColor(0xFF24AD9D)//设置分割线颜色
-                .isCyclic(false)//是否循环显示日期 例如滑动到31日自动转到1日 有个问题：不能实现日期和月份联动
-                .build();
-        pvTime.show();
-    }*/
 
     private void initCustomTimePicker() {
         /**
@@ -177,7 +141,7 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
                     }
                 })
                 .setContentTextSize(18)
-                .setType(new boolean[]{true, true, true,false, false, false})
+                .setType(new boolean[]{true, true, true, false, false, false})
                 .setLabel("年", "月", "日", "时", "分", "秒")
                 .setLineSpacingMultiplier(1.2f)
                 .setTextXOffset(0, 0, 0, 40, 0, -40)
@@ -193,6 +157,11 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
                 // pvTime.setDate(Calendar.getInstance());
                 /* pvTime.show(); //show timePicker*/
                 pvCustomTime.show();//弹出时间选择器，传递参数过去，回调的时候则可以绑定此view
+                break;
+            case R.id.rl_go_to_ill_worker:
+                Intent intent;
+                intent = new Intent(IllegalRecordActivity.this, IllegalRecordWorkerActivity.class);
+                startActivity(intent);
                 break;
         }
     }
