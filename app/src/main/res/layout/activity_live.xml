@@ -63,8 +63,8 @@
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="match_parent"
         android:layout_height="190dp"
-        android:paddingStart="24dp"
-        android:paddingTop="17dp"
+        android:paddingStart="26dp"
+        android:paddingTop="25dp"
         android:paddingEnd="24dp"
         android:paddingBottom="17dp"
         app:columnCount="4"
@@ -76,64 +76,128 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
+            android:layout_marginBottom="13dp"
             android:text="机位选择"
-            app:layout_columnSpan="4"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            app:layout_columnSpan="4" />
 
-        <Button
+        <RelativeLayout
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="机位A"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
-            android:background="@drawable/button_circle_shape"/>
+            android:layout_marginRight="11dp"
+            android:background="@drawable/button_circle_shape">
 
-        <Button
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="机位A"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_black"
+                android:textSize="14sp">
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="机位B"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
-            android:background="@drawable/button_circle_shape"/>
+            android:layout_marginRight="11dp"
+            android:background="@drawable/button_circle_shape">
 
-        <Button
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="机位B"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_black"
+                android:textSize="14sp">
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="机位C"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
-            android:background="@drawable/button_circle_shape"/>
+            android:layout_marginRight="11dp"
+            android:background="@drawable/button_circle_shape">
 
-        <Button
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="机位C"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_black"
+                android:textSize="14sp">
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:id="@+id/button6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="机位D"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
-            android:background="@drawable/button_circle_shape"/>
+            android:background="@drawable/button_circle_shape">
 
-        <Button
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="机位D"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_black"
+                android:textSize="14sp">
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="机位E"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
-            android:background="@drawable/button_circle_shape" />
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/button_circle_shape">
 
-        <Button
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="机位E"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_black"
+                android:textSize="14sp">
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="机位F"
+            android:layout_width="70dp"
+            android:layout_height="36dp"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
-            android:background="@drawable/button_circle_shape"/>
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/button_circle_shape">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="机位F"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_black"
+                android:textSize="14sp">
+            </TextView>
+
+        </RelativeLayout>
+
     </androidx.gridlayout.widget.GridLayout>
 
     <RelativeLayout
@@ -152,12 +216,15 @@
             android:layout_marginTop="6dp"
             android:layout_marginBottom="11dp"
             android:gravity="center_vertical"
-            android:text="实时监控" />
+            android:text="实时监控"
+            android:textSize="16sp"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"/>
 
         <ImageButton
             android:id="@+id/imageButton4"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_alignTop="@id/textView10"
             android:layout_alignBottom="@id/textView10"
             android:layout_alignParentStart="false"
