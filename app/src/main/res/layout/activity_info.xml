@@ -108,7 +108,7 @@
             android:layout_marginEnd="122dp"
             android:layout_marginBottom="23dp"
             android:alpha="0.75"
-            android:text="工号：cyg12345609"
+            android:text="工号：cy17905812"
             android:textColor="#222222"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -173,7 +173,6 @@
                     android:gravity="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
@@ -226,7 +225,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="6"
-                    android:text="浙江省WBD有限公司"
+                    android:text="WBD企业"
                     android:textColor="@color/font_color" />
             </LinearLayout>
 
@@ -347,14 +346,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:background="#FFFFFF"
             android:orientation="vertical"
             app:layout_constraintTop_toTopOf="parent">
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/white">
 
                 <TextView
                     android:id="@+id/textView27"
@@ -376,8 +375,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
                     android:layout_alignTop="@id/textView27"
                     android:layout_alignBottom="@id/textView27"
                     android:layout_alignParentEnd="true"
@@ -389,7 +388,9 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="1dp">
 
                 <TextView
                     android:id="@+id/textView28"
@@ -410,8 +411,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton2"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
                     android:layout_alignTop="@id/textView28"
                     android:layout_alignBottom="@id/textView28"
                     android:layout_alignParentEnd="true"
@@ -423,7 +424,9 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="1dp">
 
                 <TextView
                     android:id="@+id/textView15"
@@ -445,8 +448,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton3"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
                     android:layout_alignTop="@id/textView15"
                     android:layout_alignBottom="@id/textView15"
                     android:layout_alignParentEnd="true"
@@ -458,18 +461,40 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/button2"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="36dp"
-            android:text="退出登录"
+            android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <RelativeLayout
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="22dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="36dp"
+                android:gravity="center"
+                android:background="@drawable/exit_button_shape">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退出登录"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp">
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
