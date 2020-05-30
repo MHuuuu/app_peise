@@ -22,20 +22,21 @@
             android:layout_marginTop="33dp"
             android:layout_marginBottom="17dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/serachview2"
+            app:layout_constraintEnd_toEndOf="@id/serachview"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/back" />
 
-        <android.support.v7.widget.SearchView
-            android:id="@+id/serachview2"
-            android:layout_width="wrap_content"
-            android:layout_alignTop="@id/imageView"
-            android:layout_alignBottom="@id/imageView"
-            android:layout_alignParentEnd="true"
+        <SearchView
+            android:id="@+id/serachview"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="10dp"
-            android:layout_toEndOf="@+id/imageView"
+            android:layout_marginBottom="15dp"
+            android:layout_toRightOf="@id/iv_back"
             android:background="@drawable/box_shape"
             app:iconifiedByDefault="false" />
 
@@ -60,8 +61,10 @@
             android:text="TextView" />
 
     </RelativeLayout>
+
     <ExpandableListView
         android:id="@+id/expend_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ExpandableListView>
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl" />
 </LinearLayout>

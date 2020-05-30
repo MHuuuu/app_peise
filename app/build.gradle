@@ -31,4 +31,8 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.android.support:cardview-v7:28.0.0'
+
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    implementation 'com.contrarywind:wheelview:4.1.0'
+
 }

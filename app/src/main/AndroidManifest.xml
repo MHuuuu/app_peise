@@ -9,13 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.AttendanceActivity"></activity>
+        <activity android:name=".activity.IllegalRecordActivity"></activity>
+        <activity android:name=".activity.IllegalRecordWorkerActivity"></activity>
+        <activity android:name=".activity.InfoActivity"></activity>
+        <activity android:name=".activity.LiveActivity"></activity>
+        <activity android:name=".activity.ManageMainActivity"></activity>
+        <activity android:name=".activity.WorkDetailActivity"></activity>
+        <activity android:name=".activity.SelectPlace.AttendancePlaceActivity"></activity>
+        <activity android:name=".activity.SelectPlace.IllegalRecordPlaceActivity"></activity>
+        <activity android:name=".activity.SelectPlace.LivePlaceActivity"></activity>
     </application>
 
 </manifest>
