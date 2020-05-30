@@ -242,7 +242,7 @@
 
         <VideoView
             android:id="@+id/mVideo"
-            android:layout_width="320dp"
+            android:layout_width="375dp"
             android:layout_height="180dp">
 
         </VideoView>
