@@ -1,11 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/expand_child"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center"
-    android:textSize="16sp"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp"
-    tools:text="测试数据"/>
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:background="@drawable/card_shape_br_bl"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatars"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="7dp"
+        android:src="@mipmap/hc">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/avatars"
+        android:layout_alignBottom="@id/avatars"
+        android:layout_marginEnd="30dp"
+        android:layout_toRightOf="@id/avatars"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/label_worker_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:text="NAme"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/label_work_jid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:textSize="14dp"
+            tools:text="测试数据" />
+
+        <TextView
+            android:id="@+id/label_work_station"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:text="TextView"
+            android:textAlignment="viewEnd"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -165,12 +165,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/card_shape"
-                    android:checkedButton="@id/radioButton3"
-                    android:orientation="horizontal">
+                        <RadioGroup
+                            android:id="@+id/rg_date_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:checkedButton="@id/radioButton3"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/radioButton3"

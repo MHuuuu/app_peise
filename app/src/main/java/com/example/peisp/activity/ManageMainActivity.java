@@ -17,13 +17,13 @@ public class ManageMainActivity extends AppCompatActivity {
     private ExpandableListView mExpendList;
 
     //显示测试用
-    public String[] groupString = {"射手", "辅助", "坦克", "法师"};
+    /*public String[] groupString = {"射手", "辅助", "坦克", "法师"};
     public String[][] childString = {
             {"孙尚香", "后羿", "马可波罗", "狄仁杰"},
             {"孙膑", "蔡文姬", "鬼谷子", "杨玉环"},
             {"张飞", "廉颇", "牛魔", "项羽"},
             {"诸葛亮", "王昭君", "安琪拉", "干将"}
-    };
+    };*/
 
 
     @Override
@@ -48,7 +48,7 @@ public class ManageMainActivity extends AppCompatActivity {
         mExpendList.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
-                Toast.makeText(getApplicationContext(), groupString[groupPosition], Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), groupString[groupPosition], Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
@@ -56,7 +56,7 @@ public class ManageMainActivity extends AppCompatActivity {
         mExpendList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                Toast.makeText(getApplicationContext(), childString[groupPosition][childPosition], Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), childString[groupPosition][childPosition], Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
