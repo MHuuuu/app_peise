@@ -28,4 +28,5 @@
     <color name="search_view">#5412122C</color>
     <color name="search_view_text">#EEEEEE</color>
     <color name="execute_button">#F25555</color>
+    <color name="titlebar_bg_color">#6D6D6D</color>
 </resources>
