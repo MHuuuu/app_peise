@@ -18,7 +18,8 @@
             android:id="@+id/iv_state"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            app:srcCompat="@android:color/holo_red_dark" />
+            android:adjustViewBounds="false"
+            app:srcCompat="@drawable/red_circlr_point" />
     </RelativeLayout>
 
     <TextView

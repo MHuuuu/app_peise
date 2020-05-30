@@ -89,14 +89,14 @@
             android:layout_height="36dp"
             app:layout_columnWeight="1"
             android:layout_marginRight="11dp"
-            android:background="@drawable/button_circle_shape">
+            android:background="@drawable/button_circle_shape_dark">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="机位A"
                 android:layout_centerInParent="true"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="14sp">
             </TextView>
 
@@ -235,4 +235,17 @@
             android:scaleType="centerInside"
             app:srcCompat="@mipmap/shuaxin" />
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <VideoView
+            android:id="@+id/mVideo"
+            android:layout_width="375dp"
+            android:layout_height="180dp">
+
+        </VideoView>
+    </RelativeLayout>
+
 </LinearLayout>
