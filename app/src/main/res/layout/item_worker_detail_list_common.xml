@@ -15,25 +15,24 @@
         android:layout_weight="1">
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/iv_state"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_weight="1"
             app:srcCompat="@android:color/holo_red_dark" />
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/tv_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="5"
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/tv_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="5"
+        android:layout_weight="17"
         android:text="TextView" />
 
 </LinearLayout>

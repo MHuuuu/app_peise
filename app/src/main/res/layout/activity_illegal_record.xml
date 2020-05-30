@@ -71,41 +71,42 @@
                         android:gravity="center">
 
                         <RelativeLayout
+                            android:id="@+id/rl_go_to_ill_worker"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
 
-                    <TextView
-                        android:id="@+id/textView52"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="7dp"
-                        android:text="累计违章人数"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_black"/>
+                            <TextView
+                                android:id="@+id/textView52"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="7dp"
+                                android:text="累计违章人数"
+                                android:textColor="@color/text_black"
+                                android:textSize="14sp" />
 
-                    <TextView
-                        android:id="@+id/textView53"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/textView52"
-                        android:layout_alignParentRight="false"
-                        android:layout_centerHorizontal="false"
-                        android:layout_marginEnd="20dp"
-                        android:layout_toRightOf="@id/textView54"
-                        android:text="2"
-                        android:textSize="12sp" />
+                            <TextView
+                                android:id="@+id/textView53"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textView52"
+                                android:layout_alignParentRight="false"
+                                android:layout_centerHorizontal="false"
+                                android:layout_marginEnd="20dp"
+                                android:layout_toRightOf="@id/textView54"
+                                android:text="2"
+                                android:textSize="12sp" />
 
-                    <TextView
-                        android:id="@+id/textView54"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/textView52"
-                        android:layout_centerHorizontal="true"
-                        android:text="8"
-                        android:textSize="36sp"
-                        android:textColor="@color/text_black"
-                        android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/textView54"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textView52"
+                                android:layout_centerHorizontal="true"
+                                android:text="8"
+                                android:textColor="@color/text_black"
+                                android:textSize="36sp"
+                                android:textStyle="bold" />
 
                         </RelativeLayout>
 

@@ -38,10 +38,14 @@ public class IllegalWorkerListAdapter extends BaseAdapter {
         }
     };
 
-    /*public IllegalWorkerListAdapter(Context c, List<IllegalRecord> data) {
+    public IllegalWorkerListAdapter(Context c, List<IllegalRecord> data) {
         this.context = c;
         this.data = data;
-    }*/
+    }
+
+    public IllegalWorkerListAdapter(Context c) {
+        this.context = c;
+    }
 
     public void updateData(List<IllegalRecord> data) {
         this.data = data;
@@ -69,7 +73,8 @@ public class IllegalWorkerListAdapter extends BaseAdapter {
         // 重用convertView
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = LayoutInflater.from(context).inflate(R.layout.item_illegal_record_worker, null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_illegal_record_worker, viewGroup,false);
+//            convertView = LayoutInflater.from(context).inflate(R.layout.item_illegal_record_worker, null);
             holder.ivIllWorkerName = (TextView) convertView.findViewById(R.id.iv_ill_worker_name);
             holder.ivIllWorkerJid = (TextView) convertView.findViewById(R.id.iv_ill_worker_jid);
             holder.ivIllDetail = (TextView) convertView.findViewById(R.id.iv_ill_detail);

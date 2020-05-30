@@ -8,427 +8,446 @@
 
     <include layout="@layout/titlebar_with_searchview"></include>
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_centerVertical="false"
-            android:layout_marginStart="26dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="11dp"
-            android:gravity="center_vertical"
-            android:text="员工223"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/text_black"/>
-
-        <TextView
-            android:id="@+id/ren"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/textView10"
-            android:layout_alignBaseline="@id/textView10"
-            android:layout_marginLeft="2dp"
-            android:gravity="center_vertical"
-            android:text="人"
-            android:textSize="11sp"
-            android:textColor="@color/text_black"/>
-
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignTop="@id/textView10"
-            android:layout_alignBottom="@id/textView10"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentTop="false"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="33dp"
-            android:background="#00FFFFFF"
-            android:scaleType="centerInside"
-            app:srcCompat="@mipmap/shuaxin" />
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal">
-
-        <Space
-            android:layout_width="10dp"
-            android:layout_height="match_parent" />
-
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/card_shape">
-
-            <TextView
-                android:id="@+id/textView34"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="5dp"
-                android:text="211"
-                android:textColor="@color/text_black"
-                android:textSize="28dp" />
-
-            <TextView
-                android:id="@+id/textView37"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textView34"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"
-                android:text="正常到岗"
-                android:textColor="@color/black_a_0.4" />
-        </RelativeLayout>
-
-        <Space
-            android:layout_width="10dp"
-            android:layout_height="match_parent" />
-
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/card_shape">
-
-            <TextView
-                android:id="@+id/textView40"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="5dp"
-                android:text="1"
-                android:textSize="28dp"
-                android:textColor="@color/text_black"
-                />
-
-            <TextView
-                android:id="@+id/textView41"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textView40"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"
-                android:text="迟到"
-                android:textColor="@color/black_a_0.4" />
-        </RelativeLayout>
-
-        <Space
-            android:layout_width="10dp"
-            android:layout_height="match_parent" />
-
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/card_shape">
-
-            <TextView
-                android:id="@+id/textView42"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="5dp"
-                android:text="9"
-                android:textColor="@color/text_black"
-                android:textSize="28dp" />
-
-            <TextView
-                android:id="@+id/textView43"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textView42"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"
-                android:text="缺勤"
-                android:textColor="@color/black_a_0.4" />
-        </RelativeLayout>
-
-        <Space
-            android:layout_width="10dp"
-            android:layout_height="match_parent" />
-
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/card_shape">
-
-            <TextView
-                android:id="@+id/textView44"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="5dp"
-                android:text="2"
-                android:textColor="@color/text_black"
-                android:textSize="28dp" />
-
-            <TextView
-                android:id="@+id/textView45"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textView44"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"
-                android:text="早退"
-                android:textColor="@color/black_a_0.4"  />
-        </RelativeLayout>
-
-        <Space
-            android:layout_width="10dp"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/card_shape">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical" >
 
             <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
 
                 <TextView
-                    android:id="@+id/textView46"
+                    android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:text="当日出勤情况"
-                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="false"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="11dp"
+                    android:gravity="center_vertical"
+                    android:text="员工223"
                     android:textColor="@color/text_black"
-                    android:textSize="16sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-                <LinearLayout
-                    android:id="@+id/button15"
+                <TextView
+                    android:id="@+id/ren"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_alignTop="@id/textView46"
+                    android:layout_alignBaseline="@id/textView10"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@id/textView10"
+                    android:gravity="center_vertical"
+                    android:text="人"
+                    android:textColor="@color/text_black"
+                    android:textSize="11sp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@id/textView10"
+                    android:layout_alignBottom="@id/textView10"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="false"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="20dp"
-                    android:gravity="center"
-                    android:background="@drawable/all_button_shape">
+                    android:layout_marginEnd="33dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@mipmap/shuaxin" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_shape">
 
                     <TextView
+                        android:id="@+id/textView34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="全部"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="211"
                         android:textColor="@color/text_black"
-                        android:layout_centerInParent="true"
-                        >
-                    </TextView>
+                        android:textSize="28dp" />
 
-                    <ImageView
-                        android:layout_width="10dp"
-                        android:layout_height="10dp"
-                        android:layout_marginLeft="8dp"
-                        android:src="@mipmap/a_down_2">
-                    </ImageView>
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView34"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="15dp"
+                        android:text="正常到岗"
+                        android:textColor="@color/black_a_0.4" />
+                </RelativeLayout>
 
-                </LinearLayout>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
 
-            </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_shape">
 
-            <ListView
-                android:id="@+id/lv_att_list"
-                android:layout_width="match_parent"
-                android:layout_height="100dp" />
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="1"
+                        android:textColor="@color/text_black"
+                        android:textSize="28dp" />
 
-    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/textView41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView40"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="15dp"
+                        android:text="迟到"
+                        android:textColor="@color/black_a_0.4" />
+                </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="14dp">
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_shape">
 
+                    <TextView
+                        android:id="@+id/textView42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="9"
+                        android:textColor="@color/text_black"
+                        android:textSize="28dp" />
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView42"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="15dp"
+                        android:text="缺勤"
+                        android:textColor="@color/black_a_0.4" />
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_shape">
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="2"
+                        android:textColor="@color/text_black"
+                        android:textSize="28dp" />
+
+                    <TextView
+                        android:id="@+id/textView45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textView44"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="15dp"
+                        android:text="早退"
+                        android:textColor="@color/black_a_0.4" />
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/textView47"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:text="出勤统计"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:textColor="@color/text_black"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:checkedButton="@id/radioButton3"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/radioButton3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </RadioGroup>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
                 android:background="@drawable/card_shape">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="22dp">
+                    android:orientation="vertical">
 
                     <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/right_border">
-
-                    <RelativeLayout
-                        android:id="@+id/rv1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true">
+                        android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/textView48"
+                            android:id="@+id/textView46"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="94.6"
-                            android:textSize="28sp"
-                            android:textColor="@color/text_black"/>
-
-                        <TextView
-                            android:id="@+id/percent"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/textView48"
-                            android:layout_alignBaseline="@id/textView48"
-                            android:layout_marginLeft="2dp"
-                            android:text="%"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="当日出勤情况"
+                            android:textColor="@color/text_black"
                             android:textSize="16sp"
-                            android:textColor="@color/text_black"/>
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/button15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/textView46"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/all_button_shape"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="全部"
+                                android:textColor="@color/text_black"></TextView>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginLeft="8dp"
+                                android:src="@mipmap/a_down_2"></ImageView>
+
+                        </LinearLayout>
 
                     </RelativeLayout>
 
+                    <ListView
+                        android:id="@+id/lv_att_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
                         <TextView
-                            android:id="@+id/textView49"
+                            android:id="@+id/textView47"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/rv1"
-                            android:layout_centerHorizontal="true"
-                            android:text="日出勤率"
-                            android:textSize="14sp" />
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="出勤统计"
+                            android:textColor="@color/text_black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp">
+
+                        <RadioGroup
+                            android:id="@+id/rg_date_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignTop="@id/btn_date_picker2"
+                            android:layout_alignBottom="@id/btn_date_picker2"
+                            android:layout_alignParentStart="true"
+                            android:background="@color/white"
+                            android:checkedButton="@id/radioButton3"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioButton3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                        </RadioGroup>
+
+                        <Button
+                            android:id="@+id/btn_date_picker2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="selected_date" />
+
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1">
+                        android:background="@drawable/card_shape">
 
-                        <RelativeLayout
-                            android:id="@+id/rv2"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true">
+                            android:orientation="horizontal"
+                            android:padding="22dp">
 
-                            <TextView
-                                android:id="@+id/textView50"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="5"
-                                android:textSize="28sp"
-                                android:textColor="@color/text_black"/>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/right_border">
 
-                            <TextView
-                                android:id="@+id/ren2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_toRightOf="@id/textView50"
-                                android:layout_alignBaseline="@id/textView50"
-                                android:layout_marginLeft="2dp"
-                                android:text="人"
-                                android:textSize="16sp"
-                                android:textColor="@color/text_black"/>
+                                <RelativeLayout
+                                    android:id="@+id/rv1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true">
 
-                        </RelativeLayout>
+                                    <TextView
+                                        android:id="@+id/textView48"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="94.6"
+                                        android:textColor="@color/text_black"
+                                        android:textSize="28sp" />
 
-                        <TextView
-                            android:id="@+id/textView51"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/rv2"
-                            android:layout_centerHorizontal="true"
-                            android:text="正常到岗"
-                            android:textSize="14sp" />
+                                    <TextView
+                                        android:id="@+id/percent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignBaseline="@id/textView48"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_toRightOf="@id/textView48"
+                                        android:text="%"
+                                        android:textColor="@color/text_black"
+                                        android:textSize="16sp" />
+
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/textView49"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/rv1"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="日出勤率"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <RelativeLayout
+                                    android:id="@+id/rv2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true">
+
+                                    <TextView
+                                        android:id="@+id/textView50"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="5"
+                                        android:textColor="@color/text_black"
+                                        android:textSize="28sp" />
+
+                                    <TextView
+                                        android:id="@+id/ren2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignBaseline="@id/textView50"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_toRightOf="@id/textView50"
+                                        android:text="人"
+                                        android:textColor="@color/text_black"
+                                        android:textSize="16sp" />
+
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/textView51"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/rv2"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="正常到岗"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
                     </RelativeLayout>
 
                 </LinearLayout>
 
             </RelativeLayout>
-
         </LinearLayout>
-
-    </RelativeLayout>
+    </ScrollView>
 
 </LinearLayout>

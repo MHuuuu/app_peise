@@ -3,6 +3,7 @@ package com.example.peisp.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -15,7 +16,7 @@ import com.example.peisp.model.IllegalRecord;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IllegalRecordWorkerActivity extends AppCompatActivity {
+public class IllegalRecordWorkerActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
     private ImageView mIvBack;
     private ListView mLvIllegalWorkerList;
     private IllegalWorkerListAdapter workerListAdapter;
@@ -32,7 +33,7 @@ public class IllegalRecordWorkerActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent;
-                intent = new Intent(IllegalRecordWorkerActivity.this, MainActivity.class);
+                intent = new Intent(IllegalRecordWorkerActivity.this, IllegalRecordActivity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +44,9 @@ public class IllegalRecordWorkerActivity extends AppCompatActivity {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
         mLvIllegalWorkerList = (ListView) findViewById(R.id.lv_illegal_worker_list);
 
+        workerListAdapter=new IllegalWorkerListAdapter(this);
         mLvIllegalWorkerList.setAdapter(workerListAdapter);
+        mLvIllegalWorkerList.setOnItemClickListener(this);
     }
 
     private void initData() {
@@ -55,4 +58,15 @@ public class IllegalRecordWorkerActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Intent intent = new Intent(IllegalRecordWorkerActivity.this, IllegalRecordWorkerDetailActivity.class);
+        //目前均跳入同一页面
+        /*UserSong select=((UserSong)mDetailAdapter.getItem(position));
+        intent.putExtra("userSongId", select.getId());
+        intent.putExtra("url", select.getUrl());
+        intent.putExtra("songId", nowSongId);
+        intent.putExtra("songName", songName);*/
+        startActivity(intent);
+    }
 }

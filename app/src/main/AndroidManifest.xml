@@ -19,6 +19,7 @@
         <activity android:name=".activity.AttendanceActivity"></activity>
         <activity android:name=".activity.IllegalRecordActivity"></activity>
         <activity android:name=".activity.IllegalRecordWorkerActivity"></activity>
+        <activity android:name=".activity.IllegalRecordWorkerDetailActivity"></activity>
         <activity android:name=".activity.InfoActivity"></activity>
         <activity android:name=".activity.LiveActivity"></activity>
         <activity android:name=".activity.ManageMainActivity"></activity>

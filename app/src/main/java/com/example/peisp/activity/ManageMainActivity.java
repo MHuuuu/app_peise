@@ -3,6 +3,7 @@ package com.example.peisp.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -32,7 +33,6 @@ public class ManageMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_manager);
         initView();
 
-
         mIvBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,7 +41,6 @@ public class ManageMainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         mExpendList.setAdapter(new ManagerExtendableListViewAdapter());
         //设置分组的监听
@@ -57,6 +56,9 @@ public class ManageMainActivity extends AppCompatActivity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 //                Toast.makeText(getApplicationContext(), childString[groupPosition][childPosition], Toast.LENGTH_SHORT).show();
+                Intent intent;
+                intent = new Intent(ManageMainActivity.this, WorkDetailActivity.class);
+                startActivity(intent);
                 return true;
             }
         });
@@ -65,8 +67,8 @@ public class ManageMainActivity extends AppCompatActivity {
             @Override
             public void onGroupExpand(int groupPosition) {
                 int count = new ManagerExtendableListViewAdapter().getGroupCount();
-                for(int i = 0;i < count;i++){
-                    if (i!=groupPosition){
+                for (int i = 0; i < count; i++) {
+                    if (i != groupPosition) {
                         mExpendList.collapseGroup(i);
                     }
                 }
@@ -79,5 +81,4 @@ public class ManageMainActivity extends AppCompatActivity {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
         mExpendList = (ExpandableListView) findViewById(R.id.expend_list);
     }
-
 }
