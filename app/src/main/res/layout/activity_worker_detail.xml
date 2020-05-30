@@ -67,7 +67,7 @@
         </de.hdodenhof.circleimageview.CircleImageView>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/avatars"
             android:layout_alignParentTop="false"
@@ -84,7 +84,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="向文波·高级技师"
+                android:text="向文波"
+                android:layout_gravity="left"
+                android:textStyle="bold"
                 android:textColor="@android:color/background_dark"
                 android:textSize="20dp" />
 
@@ -95,7 +97,7 @@
                 android:layout_gravity="left"
                 android:alpha="0.75"
                 android:text="部门:西一厂"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@color/font_color"
                 android:textSize="14dp" />
 
             <TextView
@@ -104,8 +106,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:alpha="0.75"
+                android:textColor="@color/font_color"
+                android:layout_marginTop="6dp"
                 android:text="工号：cyg12345609"
-                android:textColor="@android:color/background_dark"
                 android:textSize="14dp" />
 
             <TextView
@@ -114,8 +117,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:alpha="0.75"
+                android:layout_marginTop="6dp"
                 android:text="职位:机床操作员"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@color/font_color"
                 android:textSize="14dp" />
 
             <TextView
@@ -124,21 +128,31 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:alpha="0.75"
+                android:layout_marginTop="6dp"
                 android:text="联系电话:17856785678"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@color/font_color"
                 android:textSize="14dp" />
 
         </LinearLayout>
 
-        <Button
+        <RelativeLayout
             android:id="@+id/button10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
             android:layout_alignTop="@id/avatars"
             android:layout_alignParentTop="false"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="22dp"
-            android:text="修改" />
+            android:gravity="center"
+            android:background="@drawable/button_modify">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="修改"
+                android:textSize="12sp"
+                android:textColor="@color/text_black"/>
+        </RelativeLayout>
+
     </RelativeLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -172,6 +186,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_black"
                     android:layout_marginBottom="7dp"
                     android:text="违规记录"
                     android:textSize="16dp" />
@@ -184,6 +200,7 @@
                     android:layout_alignBottom="@id/textView38"
                     android:layout_alignParentRight="true"
                     android:layout_marginEnd="40dp"
+                    android:textColor="@color/text_black"
                     android:text="更多"
                     android:textSize="16dp" />
 
@@ -235,6 +252,8 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="7dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_black"
                     android:text="违规记录"
                     android:textSize="16dp" />
 
@@ -246,6 +265,7 @@
                     android:layout_alignBottom="@id/textView35"
                     android:layout_alignParentRight="true"
                     android:layout_marginEnd="40dp"
+                    android:textColor="@color/text_black"
                     android:text="更多"
                     android:textSize="16dp" />
 
