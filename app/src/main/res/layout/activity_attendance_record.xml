@@ -6,60 +6,7 @@
     android:background="@color/background"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="@drawable/background_gradient"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="13dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginTop="33dp"
-            android:layout_marginEnd="317dp"
-            android:layout_marginRight="317dp"
-            android:layout_marginBottom="17dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/back" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="27dp"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="35dp"
-            android:text="工厂"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp" />
-
-        <android.support.v7.widget.SearchView
-            android:id="@+id/serachview"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_below="@+id/textView"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/box_shape"
-            app:iconifiedByDefault="false" />
-        <!--        (这行是取出下滑线的作用)-->
-    </RelativeLayout>
+    <include layout="@layout/titlebar_with_searchview"></include>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -476,6 +423,7 @@
                     </RelativeLayout>
 
                 </LinearLayout>
+
             </RelativeLayout>
 
         </LinearLayout>

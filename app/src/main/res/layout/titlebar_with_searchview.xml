@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_gradient"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="317dp"
+        android:layout_marginRight="317dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/back" />
+
+    <RelativeLayout
+        android:id="@+id/title_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_centerHorizontal="true"
+            android:text="西一厂"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="17dp"
+            android:layout_toRightOf="@id/textView"
+            android:layout_alignTop="@id/textView"
+            android:layout_alignBottom="@id/textView"
+            android:layout_marginLeft="6dp"
+            android:src="@mipmap/a_down"></ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@id/title_rv"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/box_shape">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="员工，工号，车间..."
+            android:textColor="@color/search_view_text"
+            android:textAlignment="center">
+        </TextView>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="11dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/sreach"
+            >
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <!--        <androidx.appcompat.widget.SearchView-->
+    <!--            android:id="@+id/serachview"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="32dp"-->
+    <!--            android:layout_below="@id/title_rv"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_marginTop="13dp"-->
+    <!--            android:layout_marginEnd="10dp"-->
+    <!--            android:layout_marginBottom="15dp"-->
+    <!--            android:background="@drawable/box_shape"-->
+    <!--            app:iconifiedByDefault="false" />-->
+    <!--        (这行是取出下滑线的作用)-->
+
+</RelativeLayout>
