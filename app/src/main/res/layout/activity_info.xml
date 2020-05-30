@@ -71,14 +71,14 @@
             android:layout_marginBottom="21dp"
             android:left="56dp"
             android:radius="37dp"
+            android:src="@mipmap/cygb"
             android:top="96dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.148"
-            android:src="@mipmap/hc" />
+            app:layout_constraintVertical_bias="0.148" />
 
         <TextView
             android:id="@+id/textView2"
@@ -109,7 +109,7 @@
             android:layout_marginBottom="23dp"
             android:alpha="0.75"
             android:gravity="center"
-            android:text="工号：hc12345609"
+            android:text="工号：cyg12345609"
             android:textColor="#222222"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -214,7 +214,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:paddingStart="26dp"
-                    android:text="TextView" />
+                    android:text="公司:" />
 
                 <TextView
                     android:id="@+id/textView19"
@@ -222,7 +222,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="6"
-                    android:text="TextView" />
+                    android:text="浙江省WBD有限公司" />
             </LinearLayout>
 
             <LinearLayout
@@ -238,7 +238,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:paddingStart="26dp"
-                    android:text="TextView" />
+                    android:text="部门:" />
 
                 <TextView
                     android:id="@+id/textView21"
@@ -246,7 +246,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="6"
-                    android:text="TextView" />
+                    android:text="西一厂" />
             </LinearLayout>
 
             <LinearLayout
@@ -262,7 +262,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:paddingStart="26dp"
-                    android:text="TextView" />
+                    android:text="职位:" />
 
                 <TextView
                     android:id="@+id/textView23"
@@ -270,7 +270,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="6"
-                    android:text="TextView" />
+                    android:text="西一厂管理员" />
             </LinearLayout>
 
             <LinearLayout
@@ -286,7 +286,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:paddingStart="26dp"
-                    android:text="TextView" />
+                    android:text="联系电话:" />
 
                 <TextView
                     android:id="@+id/textView17"
@@ -294,7 +294,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="6"
-                    android:text="TextView" />
+                    android:text="17856785678" />
             </LinearLayout>
 
             <LinearLayout
@@ -310,7 +310,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:paddingStart="26dp"
-                    android:text="TextView" />
+                    android:text="入职时间" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -318,7 +318,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="6"
-                    android:text="TextView" />
+                    android:text="2012-03" />
             </LinearLayout>
 
         </LinearLayout>
@@ -354,7 +354,7 @@
                     android:layout_marginTop="11dp"
                     android:layout_marginEnd="303dp"
                     android:layout_marginBottom="9dp"
-                    android:text="详细资料"
+                    android:text="通用"
                     android:textSize="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -388,7 +388,7 @@
                     android:layout_marginTop="11dp"
                     android:layout_marginEnd="270dp"
                     android:layout_marginBottom="9dp"
-                    android:text="详细资料"
+                    android:text="帮助与反馈"
                     android:textSize="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -421,7 +421,7 @@
                     android:layout_marginTop="11dp"
                     android:layout_marginEnd="270dp"
                     android:layout_marginBottom="9dp"
-                    android:text="详细资料"
+                    android:text="关于PEISP"
                     android:textSize="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

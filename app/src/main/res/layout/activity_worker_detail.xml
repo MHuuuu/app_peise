@@ -62,7 +62,7 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="23dp"
             android:layout_marginBottom="18dp"
-            android:src="@mipmap/hc">
+            android:src="@mipmap/cygb">
 
         </de.hdodenhof.circleimageview.CircleImageView>
 
@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:alpha="0.75"
-                android:text="工号：hc12345609"
+                android:text="部门:西一厂"
                 android:textColor="@android:color/background_dark"
                 android:textSize="14dp" />
 
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:alpha="0.75"
-                android:text="工号：hc12345609"
+                android:text="工号：cyg12345609"
                 android:textColor="@android:color/background_dark"
                 android:textSize="14dp" />
 
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:alpha="0.75"
-                android:text="工号：hc12345609"
+                android:text="职位:机床操作员"
                 android:textColor="@android:color/background_dark"
                 android:textSize="14dp" />
 
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:alpha="0.75"
-                android:text="工号：hc12345609"
+                android:text="联系电话:17856785678"
                 android:textColor="@android:color/background_dark"
                 android:textSize="14dp" />
 

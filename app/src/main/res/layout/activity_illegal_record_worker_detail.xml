@@ -62,7 +62,7 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="23dp"
             android:layout_marginBottom="18dp"
-            android:src="@mipmap/hc">
+            android:src="@mipmap/cygb">
 
         </de.hdodenhof.circleimageview.CircleImageView>
 

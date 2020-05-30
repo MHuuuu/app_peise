@@ -41,8 +41,7 @@
                 android:layout_width="74dp"
                 android:layout_height="74dp"
                 android:layout_marginLeft="10dp"
-                android:src="@mipmap/hc"
-                >
+                android:src="@mipmap/cygb">
 
             </de.hdodenhof.circleimageview.CircleImageView>
 
@@ -69,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:alpha="0.75"
-                    android:text="工号：hc12345609"
+                    android:text="工号：cyg12345609"
                     android:textColor="#F5F5F5"
                     android:textSize="12sp" />
 
