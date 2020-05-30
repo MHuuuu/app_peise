@@ -3,63 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E6E6"
+    android:background="@color/background"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="@drawable/background_gradient"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="13dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginTop="33dp"
-            android:layout_marginEnd="317dp"
-            android:layout_marginRight="317dp"
-            android:layout_marginBottom="17dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/back" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="27dp"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="35dp"
-            android:text="工厂"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp" />
-
-        <android.support.v7.widget.SearchView
-            android:id="@+id/serachview"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_below="@+id/textView"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/box_shape"
-            app:iconifiedByDefault="false" />
-        <!--        (这行是取出下滑线的作用)-->
-    </RelativeLayout>
+    <include layout="@layout/titlebar_with_searchview"></include>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -77,12 +24,27 @@
             android:layout_marginTop="6dp"
             android:layout_marginBottom="11dp"
             android:gravity="center_vertical"
-            android:text="TextView" />
+            android:text="员工223"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"/>
+
+        <TextView
+            android:id="@+id/ren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textView10"
+            android:layout_alignBaseline="@id/textView10"
+            android:layout_marginLeft="2dp"
+            android:gravity="center_vertical"
+            android:text="人"
+            android:textSize="11sp"
+            android:textColor="@color/text_black"/>
 
         <ImageButton
             android:id="@+id/imageButton4"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_alignTop="@id/textView10"
             android:layout_alignBottom="@id/textView10"
             android:layout_alignParentStart="false"
@@ -107,7 +69,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/white">
+            android:background="@drawable/card_shape">
 
             <TextView
                 android:id="@+id/textView34"
@@ -117,6 +79,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
                 android:text="211"
+                android:textColor="@color/text_black"
                 android:textSize="28dp" />
 
             <TextView
@@ -127,7 +90,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="15dp"
-                android:text="TextView"
+                android:text="正常到岗"
                 android:textColor="@color/black_a_0.4" />
         </RelativeLayout>
 
@@ -139,7 +102,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/white">
+            android:background="@drawable/card_shape">
 
             <TextView
                 android:id="@+id/textView40"
@@ -148,8 +111,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
-                android:text="211"
-                android:textSize="28dp" />
+                android:text="1"
+                android:textSize="28dp"
+                android:textColor="@color/text_black"
+                />
 
             <TextView
                 android:id="@+id/textView41"
@@ -159,7 +124,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="15dp"
-                android:text="TextView"
+                android:text="迟到"
                 android:textColor="@color/black_a_0.4" />
         </RelativeLayout>
 
@@ -171,7 +136,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/white">
+            android:background="@drawable/card_shape">
 
             <TextView
                 android:id="@+id/textView42"
@@ -180,7 +145,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
-                android:text="211"
+                android:text="9"
+                android:textColor="@color/text_black"
                 android:textSize="28dp" />
 
             <TextView
@@ -191,7 +157,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="15dp"
-                android:text="TextView"
+                android:text="缺勤"
                 android:textColor="@color/black_a_0.4" />
         </RelativeLayout>
 
@@ -203,7 +169,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/white">
+            android:background="@drawable/card_shape">
 
             <TextView
                 android:id="@+id/textView44"
@@ -212,7 +178,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp"
-                android:text="211"
+                android:text="2"
+                android:textColor="@color/text_black"
                 android:textSize="28dp" />
 
             <TextView
@@ -223,7 +190,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="15dp"
-                android:text="TextView"
+                android:text="早退"
                 android:textColor="@color/black_a_0.4"  />
         </RelativeLayout>
 
@@ -238,7 +205,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
-        android:background="@color/white">
+        android:background="@drawable/card_shape">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -246,8 +213,9 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
 
                 <TextView
                     android:id="@+id/textView46"
@@ -256,20 +224,39 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"
-                    android:text="TextView"
-                    android:textSize="16dp" />
+                    android:text="当日出勤情况"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
 
-                <Button
+                <LinearLayout
                     android:id="@+id/button15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal"
+                    android:layout_alignTop="@id/textView46"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="false"
-                    android:layout_marginStart="196dp"
                     android:layout_marginEnd="20dp"
-                    android:layout_toEndOf="@+id/textView46"
-                    android:text="全部" />
+                    android:gravity="center"
+                    android:background="@drawable/all_button_shape">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="全部"
+                        android:textColor="@color/text_black"
+                        android:layout_centerInParent="true"
+                        >
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@mipmap/a_down_2">
+                    </ImageView>
+
+                </LinearLayout>
 
             </RelativeLayout>
 
@@ -304,8 +291,10 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"
-                    android:text="TextView"
-                    android:textSize="16dp" />
+                    android:text="出勤统计"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_black"/>
 
             </RelativeLayout>
 
@@ -340,7 +329,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white">
+                android:background="@drawable/card_shape">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -354,22 +343,41 @@
                         android:layout_weight="1"
                         android:background="@drawable/right_border">
 
+                    <RelativeLayout
+                        android:id="@+id/rv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
                         <TextView
                             android:id="@+id/textView48"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:text="94.6%"
-                            android:textSize="28dp" />
+                            android:text="94.6"
+                            android:textSize="28sp"
+                            android:textColor="@color/text_black"/>
+
+                        <TextView
+                            android:id="@+id/percent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/textView48"
+                            android:layout_alignBaseline="@id/textView48"
+                            android:layout_marginLeft="2dp"
+                            android:text="%"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_black"/>
+
+                    </RelativeLayout>
 
                         <TextView
                             android:id="@+id/textView49"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/textView48"
+                            android:layout_below="@id/rv1"
                             android:layout_centerHorizontal="true"
-                            android:text="TextView"
-                            android:textSize="14dp" />
+                            android:text="日出勤率"
+                            android:textSize="14sp" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -377,25 +385,45 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/textView50"
+                        <RelativeLayout
+                            android:id="@+id/rv2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:text="5r"
-                            android:textSize="28dp" />
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:id="@+id/textView50"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:textSize="28sp"
+                                android:textColor="@color/text_black"/>
+
+                            <TextView
+                                android:id="@+id/ren2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/textView50"
+                                android:layout_alignBaseline="@id/textView50"
+                                android:layout_marginLeft="2dp"
+                                android:text="人"
+                                android:textSize="16sp"
+                                android:textColor="@color/text_black"/>
+
+                        </RelativeLayout>
 
                         <TextView
                             android:id="@+id/textView51"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/textView50"
+                            android:layout_below="@id/rv2"
                             android:layout_centerHorizontal="true"
-                            android:text="TextView"
-                            android:textSize="14dp" />
+                            android:text="正常到岗"
+                            android:textSize="14sp" />
                     </RelativeLayout>
 
                 </LinearLayout>
+
             </RelativeLayout>
 
         </LinearLayout>
