@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:alpha="0.75"
-                android:text="工号：hc12345609"
+                android:text="工号：cyg12345609"
                 android:textColor="@android:color/background_dark"
                 android:textSize="12sp" />
 
