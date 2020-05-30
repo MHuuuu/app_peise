@@ -214,17 +214,17 @@
                     android:text="更多"
                     android:textSize="16dp" />
 
-                        <ImageView
-                            android:id="@+id/imageView40"
-                            android:layout_width="15dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/textView38"
-                            android:layout_alignBottom="@id/textView38"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginEnd="26dp"
-                            android:scaleType="centerInside"
-                            app:srcCompat="@mipmap/a_right_fill" />
-                    </RelativeLayout>
+                <ImageView
+                    android:id="@+id/imageView40"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/textView38"
+                    android:layout_alignBottom="@id/textView38"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="26dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@mipmap/a_right_fill" />
+            </RelativeLayout>
 
                     <ListView
                         android:id="@+id/wg_list"
