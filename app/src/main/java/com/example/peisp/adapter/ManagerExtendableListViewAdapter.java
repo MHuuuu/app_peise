@@ -8,17 +8,45 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
 import com.example.peisp.R;
+import com.example.peisp.model.Department;
+import com.example.peisp.model.Worker;
 
 public class ManagerExtendableListViewAdapter extends BaseExpandableListAdapter {
     private Context mcontext;
-    public String[] groupString = {"射手", "辅助", "坦克", "法师"};
-    public String[][] childString = {
-            {"孙尚香", "后羿", "马可波罗", "狄仁杰"},
-            {"孙膑", "蔡文姬", "鬼谷子", "杨玉环"},
-            {"张飞", "廉颇", "牛魔", "项羽"},
-            {"诸葛亮", "王昭君", "安琪拉", "干将"}
-
+    static public Department[] groupString={
+            new Department("车间A",7),
+            new Department("车间B",27),
+            new Department("车间C",19),
+            new Department("车间D",5)
     };
+    static public Worker[][] childString={
+            { new Worker("王石",groupString[0],"机床操作员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[0],"机床操作员","[hc5678911]","178****1234"),
+                    new Worker("于清教",groupString[0],"叉车驾驶员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[0],"机床操作员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[0],"叉车驾驶员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[0],"机床操作员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[0],"叉车驾驶员","[hc5678910]","178****1234")},
+            { new Worker("王石",groupString[1],"机床操作员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[1],"机床操作员","[hc5678911]","178****1234"),
+                    new Worker("于清教",groupString[1],"叉车驾驶员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[1],"机床操作员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[1],"叉车驾驶员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[1],"机床操作员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[1],"叉车驾驶员","[hc5678910]","178****1234")},
+            { new Worker("王石",groupString[2],"机床操作员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[2],"机床操作员","[hc5678911]","178****1234"),
+                    new Worker("于清教",groupString[2],"叉车驾驶员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[2],"机床操作员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[2],"机床操作员","[hc5678910]","178****1234"),
+                    new Worker("王石",groupString[2],"叉车驾驶员","[hc5678910]","178****1234")},
+            { new Worker("陈嘉敏",groupString[3],"机床操作员","[hc5678910]","178****1234"),
+                    new Worker("陈嘉敏",groupString[3],"机床操作员","[hc5678911]","178****1234"),
+                    new Worker("陈嘉敏",groupString[3],"机床操作员","[hc5678911]","178****1234"),
+                    new Worker("陈嘉敏",groupString[3],"机床操作员","[hc5678911]","178****1234"),
+                    new Worker("陈嘉敏",groupString[3],"机床操作员","[hc5678911]","178****1234")}
+    };
+
 
     @Override
     // 获取分组的个数
@@ -77,12 +105,14 @@ public class ManagerExtendableListViewAdapter extends BaseExpandableListAdapter 
         if (convertView == null){
             convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_expend_list_partent,parent,false);
             groupViewHolder = new GroupViewHolder();
-            groupViewHolder.tvTitle = (TextView)convertView.findViewById(R.id.label_group_normal);
+            groupViewHolder.tvName = (TextView)convertView.findViewById(R.id.label_dep_name);
+            groupViewHolder.tvNum = (TextView)convertView.findViewById(R.id.label_dep_num);
             convertView.setTag(groupViewHolder);
         }else {
             groupViewHolder = (GroupViewHolder)convertView.getTag();
         }
-        groupViewHolder.tvTitle.setText(groupString[groupPosition]);
+        groupViewHolder.tvName.setText(groupString[groupPosition].getName());
+        groupViewHolder.tvNum.setText(groupString[groupPosition].getWorkerNum().toString());
         return convertView;
     }
     /**
@@ -106,13 +136,16 @@ public class ManagerExtendableListViewAdapter extends BaseExpandableListAdapter 
         if (convertView==null){
             convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_expend_list_child,parent,false);
             childViewHolder = new ChildViewHolder();
-            childViewHolder.tvTitle = (TextView)convertView.findViewById(R.id.expand_child);
+            childViewHolder.tvWorkerName = (TextView)convertView.findViewById(R.id.label_worker_name);
+            childViewHolder.tvWorkerJID = (TextView)convertView.findViewById(R.id.label_work_jid);
+            childViewHolder.tvWorkerStation = (TextView)convertView.findViewById(R.id.label_work_station);
             convertView.setTag(childViewHolder);
-
         }else {
             childViewHolder = (ChildViewHolder) convertView.getTag();
         }
-        childViewHolder.tvTitle.setText(childString[groupPosition][childPosition]);
+        childViewHolder.tvWorkerName.setText(childString[groupPosition][childPosition].getName());
+        childViewHolder.tvWorkerJID.setText(childString[groupPosition][childPosition].getJobNumber());
+        childViewHolder.tvWorkerStation.setText(childString[groupPosition][childPosition].getStation());
         return convertView;
     }
 
@@ -123,11 +156,13 @@ public class ManagerExtendableListViewAdapter extends BaseExpandableListAdapter 
     }
 
     static class GroupViewHolder {
-        TextView tvTitle;
+        TextView tvName;
+        TextView tvNum;
     }
 
     static class ChildViewHolder {
-        TextView tvTitle;
-
+        TextView tvWorkerName;
+        TextView tvWorkerJID;
+        TextView tvWorkerStation;
     }
 }

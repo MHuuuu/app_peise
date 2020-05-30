@@ -85,8 +85,8 @@
 
             <ImageView
                 android:id="@+id/iv_info"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="23dp"
                 app:srcCompat="@mipmap/a_right" />

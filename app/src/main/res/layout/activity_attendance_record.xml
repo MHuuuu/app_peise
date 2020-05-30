@@ -261,6 +261,7 @@
             </RelativeLayout>
 
             <ListView
+                android:id="@+id/lv_att_list"
                 android:layout_width="match_parent"
                 android:layout_height="100dp" />
         </LinearLayout>
