@@ -242,6 +242,19 @@
 
         <VideoView
             android:id="@+id/mVideo"
+            android:layout_width="375dp"
+            android:layout_height="180dp">
+
+        </VideoView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <VideoView
+            android:id="@+id/mVideo"
             android:layout_width="320dp"
             android:layout_height="180dp">
 

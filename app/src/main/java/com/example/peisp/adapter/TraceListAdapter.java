@@ -5,7 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import com.example.peisp.R;
 import com.example.peisp.model.Trace;
@@ -48,8 +51,10 @@ public class TraceListAdapter extends BaseAdapter {
         } else {
             holder = new ViewHolder();
             convertView = LayoutInflater.from(context).inflate(R.layout.item_trace, parent, false);
-            holder.tvAcceptTime = (TextView) convertView.findViewById(R.id.tvAcceptTime);
-            holder.tvAcceptStation = (TextView) convertView.findViewById(R.id.tvAcceptStation);
+            holder.ivIllPic = (ImageView) convertView.findViewById(R.id.iv_Ill_pic);
+            holder.ivIllPic2 = (ImageView) convertView.findViewById(R.id.iv_Ill_pic_2);
+            holder.tvAcceptTime = (TextView) convertView.findViewById(R.id.tv_accept_yime);
+            holder.tvAcceptStation = (TextView) convertView.findViewById(R.id.tv_accept_station);
             holder.tvTopLine = (TextView) convertView.findViewById(R.id.tvTopLine);
             holder.tvDot = (TextView) convertView.findViewById(R.id.tvDot);
             convertView.setTag(holder);
@@ -69,6 +74,14 @@ public class TraceListAdapter extends BaseAdapter {
             holder.tvDot.setBackgroundResource(R.drawable.timelline_dot_normal);
         }
 
+        if (trace.getImgIds().length>1){
+            holder.ivIllPic.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.nohat2));
+            holder.ivIllPic2.setVisibility(View.VISIBLE);
+            holder.ivIllPic2.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.nohat3));
+        }else {
+            holder.ivIllPic.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.nohat3));
+            holder.ivIllPic2.setVisibility(View.INVISIBLE);
+        }
         holder.tvAcceptTime.setText(trace.getAcceptTime());
         holder.tvAcceptStation.setText(trace.getAcceptStation());
         return convertView;
@@ -83,6 +96,7 @@ public class TraceListAdapter extends BaseAdapter {
     }
 
     static class ViewHolder {
+        public ImageView ivIllPic, ivIllPic2;
         public TextView tvAcceptTime, tvAcceptStation;
         public TextView tvTopLine, tvDot;
     }

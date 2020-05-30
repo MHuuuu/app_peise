@@ -48,23 +48,33 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
+
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bottom_border"
-        android:paddingBottom="20dp">
+        android:layout_height="match_parent">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/avatars"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="23dp"
-            android:layout_marginBottom="18dp"
-            android:src="@mipmap/cygb">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_border"
+                android:paddingBottom="20dp">
 
-        </de.hdodenhof.circleimageview.CircleImageView>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatars"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginBottom="18dp"
+                    android:src="@mipmap/cygb">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
 
         <LinearLayout
             android:layout_width="150dp"
@@ -133,7 +143,7 @@
                 android:textColor="@color/font_color"
                 android:textSize="14dp" />
 
-        </LinearLayout>
+                </LinearLayout>
 
         <RelativeLayout
             android:id="@+id/button10"
@@ -155,30 +165,30 @@
 
     </RelativeLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textView38"
@@ -216,34 +226,35 @@
                     app:srcCompat="@mipmap/a_right_fill" />
             </RelativeLayout>
 
-            <ListView
-                android:id="@+id/wg_list"
+                    <ListView
+                        android:id="@+id/wg_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:divider="@color/colorTransparent" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="#FFFFFF">
 
-        </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:background="#FFFFFF">
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textView35"
@@ -269,24 +280,27 @@
                     android:text="更多"
                     android:textSize="16dp" />
 
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="15dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@id/textView35"
-                    android:layout_alignBottom="@id/textView35"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="26dp"
-                    android:scaleType="centerInside"
-                    app:srcCompat="@mipmap/a_right_fill" />
-            </RelativeLayout>
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/textView35"
+                            android:layout_alignBottom="@id/textView35"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="26dp"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@mipmap/a_right_fill" />
+                    </RelativeLayout>
 
-            <ListView
-                android:id="@+id/kq_list"
-                android:layout_width="match_parent"
-                android:layout_height="150dp" />
+                    <ListView
+                        android:id="@+id/kq_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:divider="@color/colorTransparent" />
 
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </LinearLayout>
