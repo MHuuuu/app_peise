@@ -311,35 +311,61 @@
                         <RadioGroup
                             android:id="@+id/rg_date_switch"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_alignTop="@id/btn_date_picker2"
-                            android:layout_alignBottom="@id/btn_date_picker2"
-                            android:layout_alignParentStart="true"
-                            android:background="@color/white"
-                            android:checkedButton="@id/radioButton3"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape"
+                            android:checkedButton="@id/rb_day"
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/radioButton3"
+                                android:id="@+id/rb_day"
                                 android:layout_width="wrap_content"
-                                android:layout_height="match_parent" />
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/radiobutton_background"
+                                android:button="@null"
+                                android:paddingStart="10dp"
+                                android:paddingTop="7dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="7dp"
+                                android:text="日"
+                                android:textColor="@color/radiobutton_textcolor"
+                                android:textSize="25dp" />
 
                             <RadioButton
-                                android:id="@+id/radioButton2"
+                                android:id="@+id/rb_week"
                                 android:layout_width="wrap_content"
-                                android:layout_height="match_parent" />
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:paddingStart="10dp"
+                                android:paddingTop="7dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="7dp"
+                                android:text="周"
+                                android:textColor="@color/radiobutton_textcolor"
+                                android:textSize="25dp" />
 
                             <RadioButton
-                                android:id="@+id/radioButton"
+                                android:id="@+id/rb_month"
                                 android:layout_width="wrap_content"
-                                android:layout_height="match_parent" />
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:paddingStart="10dp"
+                                android:paddingTop="7dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="7dp"
+                                android:text="月"
+                                android:textColor="@color/radiobutton_textcolor"
+                                android:textSize="25dp" />
                         </RadioGroup>
 
+
                         <Button
-                            android:id="@+id/btn_date_picker2"
+                            android:id="@+id/btn_date_picker"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/rg_date_switch"
+                            android:layout_alignBottom="@id/rg_date_switch"
                             android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_shape"
                             android:text="selected_date" />
 
                     </RelativeLayout>
