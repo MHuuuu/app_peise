@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +19,7 @@ import java.util.List;
 
 public class IllegalRecordWorkerActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
     private ImageView mIvBack;
+    private TextView mTitleTv;
     private ListView mLvIllegalWorkerList;
     private IllegalWorkerListAdapter workerListAdapter;
     private List<IllegalRecord> data;
@@ -42,11 +44,14 @@ public class IllegalRecordWorkerActivity extends AppCompatActivity implements Ad
 
     private void initView() {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
+        mTitleTv = (TextView) findViewById(R.id.title_tv);
         mLvIllegalWorkerList = (ListView) findViewById(R.id.lv_illegal_worker_list);
 
         workerListAdapter=new IllegalWorkerListAdapter(this);
         mLvIllegalWorkerList.setAdapter(workerListAdapter);
         mLvIllegalWorkerList.setOnItemClickListener(this);
+
+        mTitleTv.setText("累计违规详情");
     }
 
     private void initData() {

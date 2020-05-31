@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +14,7 @@ import java.time.Instant;
 
 public class InfoActivity extends AppCompatActivity {
     private ImageView mIvBack;
+    private TextView mTitleTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +30,12 @@ public class InfoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mTitleTv.setText("设置");
     }
 
     private void initView() {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
+        mTitleTv = (TextView) findViewById(R.id.title_tv);
     }
 }

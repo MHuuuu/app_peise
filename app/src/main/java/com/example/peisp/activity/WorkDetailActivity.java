@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +17,7 @@ import java.util.List;
 
 public class WorkDetailActivity extends AppCompatActivity {
     private ImageView mIvBack;
+    private TextView mTitleTv;
     private WorkerDetailAdapter wdAdapter1,wdAdapter2;
 
 
@@ -60,6 +62,8 @@ public class WorkDetailActivity extends AppCompatActivity {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
         mWgList = (ListView) findViewById(R.id.wg_list);
         mKqList = (ListView) findViewById(R.id.kq_list);
+        mTitleTv = (TextView) findViewById(R.id.title_tv);
+        mTitleTv.setText("员工信息");
     }
 
     private void initList() {

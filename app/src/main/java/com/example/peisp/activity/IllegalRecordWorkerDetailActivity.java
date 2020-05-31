@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +16,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class IllegalRecordWorkerDetailActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView mIvBack;
+    private TextView mTitleTv;
     private RelativeLayout mBtnCheck;
     private ImageView mIvIllPic;
     private ArrayAdapter<String> adapter;
@@ -39,10 +41,13 @@ public class IllegalRecordWorkerDetailActivity extends AppCompatActivity impleme
 
     private void initView() {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
+        mTitleTv = (TextView) findViewById(R.id.title_tv);
         mBtnCheck = (RelativeLayout) findViewById(R.id.btn_check);
         mIvIllPic = (ImageView) findViewById(R.id.iv_ill_pic);
         mBtnCheck.setOnClickListener(this);
         mIvIllPic.setOnClickListener(this);
+
+        mTitleTv.setText("员工违规详情");
     }
 
     private void initData() {

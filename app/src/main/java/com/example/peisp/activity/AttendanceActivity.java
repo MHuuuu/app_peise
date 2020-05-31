@@ -1,6 +1,7 @@
 package com.example.peisp.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -28,7 +29,12 @@ public class AttendanceActivity extends AppCompatActivity {
     private void initView() {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
         mLvAttList = (ListView) findViewById(R.id.lv_att_list);
-
+        mIvBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
 }
