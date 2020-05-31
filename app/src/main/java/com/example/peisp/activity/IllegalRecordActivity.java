@@ -68,8 +68,8 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
 
     private void initData() {
         // 模拟一些假的数据-时间线
-        traceList.add(new Trace(new String[]{"1","2"},"2016-05-25 17:48:00", ""));
-        traceList.add(new Trace(new String[]{"3"},"2016-05-25 14:13:00", ""));
+        traceList.add(new Trace(new String[]{"1","2"},"2020-05-25 17:48:00", ""));
+        traceList.add(new Trace(new String[]{"3"},"2020-05-25 14:13:00", ""));
          adapter = new TraceListAdapter(this, traceList);
         mLvTrace.setAdapter(adapter);
     }

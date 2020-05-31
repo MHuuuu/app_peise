@@ -48,18 +48,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2014/06/24 20:55:28"
-            android:textColor="#999"
-            android:textSize="18dp" />
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
 
         <androidx.gridlayout.widget.GridLayout
             android:id="@+id/glRecordImg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_accept_yime"
-            android:paddingStart="20dp"
             android:paddingTop="10dp"
-            android:paddingEnd="20dp"
-            android:paddingBottom="10dp">
+            android:paddingEnd="20dp">
 
             <ImageView
                 android:id="@+id/iv_Ill_pic"
@@ -69,7 +67,7 @@
                 tools:srcCompat="@drawable/nohat2" />
 
             <Space
-                android:layout_width="15dp"
+                android:layout_width="8dp"
                 android:layout_height="wrap_content" />
 
             <ImageView
