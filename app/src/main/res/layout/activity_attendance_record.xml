@@ -371,6 +371,7 @@
 <!--                    </RelativeLayout>-->
 
                     <RelativeLayout
+                        android:id="@+id/ll_num"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/card_shape">
@@ -470,6 +471,14 @@
 
                     </RelativeLayout>
 
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_below="@id/ll_num"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@mipmap/test_peise_1" />
                 </LinearLayout>
 
             </RelativeLayout>
