@@ -30,7 +30,8 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
     private ImageView mIvBack;
     private ListView mLvTrace;
     private List<Trace> traceList = new ArrayList<>(10);
-    private Button mBtnDatePicker;
+    private RelativeLayout mBtnDatePicker;
+    private TextView mDataPickerTv;
     private TraceListAdapter adapter;
 
     private TimePickerView pvCustomTime;
@@ -57,7 +58,8 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
     private void initView() {
         mIvBack = (ImageView) findViewById(R.id.iv_back);
         mLvTrace = (ListView) findViewById(R.id.lv_trace);
-        mBtnDatePicker = (Button) findViewById(R.id.btn_date_picker);
+        mBtnDatePicker = (RelativeLayout) findViewById(R.id.btn_date_picker);
+        mDataPickerTv = (TextView) findViewById(R.id.data_picker_tv);
         mRlGoToIllWorker = (RelativeLayout) findViewById(R.id.rl_go_to_ill_worker);
 
         mBtnDatePicker.setOnClickListener(this);
@@ -92,7 +94,7 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
         pvCustomTime = new TimePickerBuilder(this, new OnTimeSelectListener() {
             @Override
             public void onTimeSelect(Date date, View v) {//选中事件回调
-                mBtnDatePicker.setText(getTime(date));
+                mDataPickerTv.setText(getTime(date));
             }
         })
                 /*.setType(TimePickerView.Type.ALL)//default is all

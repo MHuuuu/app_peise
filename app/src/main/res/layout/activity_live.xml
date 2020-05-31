@@ -41,7 +41,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="35dp"
             android:layout_marginBottom="18dp"
-            android:text="监控地址选择"
+            android:text="西一厂"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="20dp" />
@@ -243,7 +243,7 @@
         <VideoView
             android:id="@+id/mVideo"
             android:layout_width="375dp"
-            android:layout_height="180dp">
+            android:layout_height="220dp">
 
         </VideoView>
     </RelativeLayout>

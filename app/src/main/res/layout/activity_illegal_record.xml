@@ -183,8 +183,8 @@
 
                             <RadioButton
                                 android:id="@+id/rb_day"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:background="@drawable/radiobutton_background"
                                 android:button="@null"
                                 android:paddingStart="10dp"
@@ -193,12 +193,12 @@
                                 android:paddingBottom="7dp"
                                 android:text="日"
                                 android:textColor="@color/radiobutton_textcolor"
-                                android:textSize="25dp" />
+                                android:textSize="16sp" />
 
                             <RadioButton
                                 android:id="@+id/rb_week"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:background="@drawable/radiobutton_background"
                                 android:button="@null"
                                 android:paddingStart="10dp"
@@ -207,12 +207,12 @@
                                 android:paddingBottom="7dp"
                                 android:text="周"
                                 android:textColor="@color/radiobutton_textcolor"
-                                android:textSize="25dp" />
+                                android:textSize="16sp" />
 
                             <RadioButton
                                 android:id="@+id/rb_month"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
                                 android:background="@drawable/radiobutton_background"
                                 android:button="@null"
                                 android:paddingStart="10dp"
@@ -221,38 +221,66 @@
                                 android:paddingBottom="7dp"
                                 android:text="月"
                                 android:textColor="@color/radiobutton_textcolor"
-                                android:textSize="25dp" />
+                                android:textSize="16sp" />
                         </RadioGroup>
 
 
-
-                        <Button
+                        <RelativeLayout
                             android:id="@+id/btn_date_picker"
-                            android:layout_width="150dp"
-                            android:layout_height="36dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_alignTop="@id/rg_date_switch"
                             android:layout_alignBottom="@id/rg_date_switch"
                             android:layout_alignParentRight="true"
-                            android:textSize="14sp"
-                            android:textColor="#12122C"
-                            android:text="selected_date"
+                            android:gravity="center"
                             android:background="@drawable/button_date_select">
 
-                        </Button>
+                            <TextView
+                                android:id="@+id/data_picker_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:textColor="#12122C"
+                                android:text="2020.05.30" />
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="17dp"
+                                android:layout_toRightOf="@id/data_picker_tv"
+                                android:layout_alignTop="@id/data_picker_tv"
+                                android:layout_alignBottom="@id/data_picker_tv"
+                                android:layout_marginLeft="6dp"
+                                android:src="@mipmap/a_down_2">
+                            </ImageView>
+                        </RelativeLayout>
+
+<!--                        <Button-->
+<!--                            android:id="@+id/btn_date_picker"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="36dp"-->
+<!--                            android:layout_alignTop="@id/rg_date_switch"-->
+<!--                            android:layout_alignBottom="@id/rg_date_switch"-->
+<!--                            android:layout_alignParentRight="true"-->
+<!--                            android:textSize="14sp"-->
+<!--                            android:textColor="#12122C"-->
+<!--                            android:text="2020.05.30"-->
+<!--                            android:background="@drawable/button_date_select">-->
+<!--                        </Button>-->
 
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17dp"
                         android:background="@drawable/card_shape">
 
                         <ImageView
                             android:id="@+id/imageView3"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="fitCenter"
-                            app:srcCompat="@mipmap/test_peise_0" />
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/test_peisp_2" />
                     </RelativeLayout>
 
                 </LinearLayout>
