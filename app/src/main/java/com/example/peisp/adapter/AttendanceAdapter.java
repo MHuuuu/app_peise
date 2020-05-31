@@ -1,6 +1,7 @@
 package com.example.peisp.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -87,6 +88,17 @@ public class AttendanceAdapter extends BaseAdapter {
         holder.iv_att_jid.setText(data.get(i).getWorker().getJobNumber());
         holder.iv_att_time.setText(data.get(i).getTime());
         holder.iv_att_state.setText(data.get(i).getState());
+        switch ((String)data.get(i).getState()){
+            case "上岗":
+            holder.iv_att_state.setTextColor(Color.rgb(79, 223, 223));
+            break;
+            case "迟到":
+            holder.iv_att_state.setTextColor(Color.rgb(247, 179, 27));
+            break;
+            case "早退":
+            holder.iv_att_state.setTextColor(Color.rgb(248, 243, 39));
+            break;
+        }
 
         return convertView;
     }
