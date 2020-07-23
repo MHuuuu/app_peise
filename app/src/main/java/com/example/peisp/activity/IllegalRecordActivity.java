@@ -26,6 +26,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import lecho.lib.hellocharts.model.Axis;
+import lecho.lib.hellocharts.model.AxisValue;
+import lecho.lib.hellocharts.model.Line;
+import lecho.lib.hellocharts.model.LineChartData;
+import lecho.lib.hellocharts.model.PointValue;
+import lecho.lib.hellocharts.model.ValueShape;
+import lecho.lib.hellocharts.util.ChartUtils;
+import lecho.lib.hellocharts.view.LineChartView;
+
 public class IllegalRecordActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView mIvBack;
     private ListView mLvTrace;
@@ -37,10 +46,34 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
     private TimePickerView pvCustomTime;
     private RelativeLayout mRlGoToIllWorker;
 
+
+    private int numberOfLines = 1;
+    private int maxNumberOfLines = 4;
+    private int numberOfPoints = 9;
+
+    float[][] randomNumbersTab = new float[maxNumberOfLines][numberOfPoints];
+    private boolean hasAxes = true;
+    private boolean hasAxesNames = false;
+    private boolean hasLines = true;
+    private boolean hasPoints = true;
+    private ValueShape shape = ValueShape.CIRCLE;
+    private boolean isFilled = false;
+    private boolean hasLabels = false;
+    private boolean isCubic = false;
+    private boolean hasLabelForSelected = true;
+    private boolean pointsHaveDifferentColor;
+    private boolean hasGradientToTransparent = false;
+
+    private LineChartView chart;
+    private LineChartData data;
+    public final static String[] xValues = new String[]{"0时", "3时", "6时","9时", "12时", "15时", "18时", "21时", "24时"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_illegal_record);
+
+
         initView();
         initData();
         initCustomTimePicker();
@@ -53,6 +86,8 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
                 startActivity(intent);
             }
         });
+
+
     }
 
     private void initView() {
@@ -62,16 +97,24 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
         mDataPickerTv = (TextView) findViewById(R.id.data_picker_tv);
         mRlGoToIllWorker = (RelativeLayout) findViewById(R.id.rl_go_to_ill_worker);
 
+
+        chart = (LineChartView) findViewById(R.id.line_chart_time);
+//        chart.setOnValueTouchListener(new ValueTouchListener());
+
         mBtnDatePicker.setOnClickListener(this);
         mRlGoToIllWorker.setOnClickListener(this);
     }
 
     private void initData() {
         // 模拟一些假的数据-时间线
-        traceList.add(new Trace(new String[]{"1","2"},"2020-05-25 17:48:00", ""));
-        traceList.add(new Trace(new String[]{"3"},"2020-05-25 14:13:00", ""));
-         adapter = new TraceListAdapter(this, traceList);
+        traceList.add(new Trace(new String[]{"1", "2"}, "2020-05-25 17:48:00", ""));
+        traceList.add(new Trace(new String[]{"3"}, "2020-05-25 14:13:00", ""));
+        adapter = new TraceListAdapter(this, traceList);
         mLvTrace.setAdapter(adapter);
+
+        generateValues();
+        generateData();
+
     }
 
 
@@ -166,4 +209,74 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         return format.format(date);
     }
+
+
+    /*******
+     * 图表数字初始化
+     */
+    private void generateValues() {
+        for (int i = 0; i < maxNumberOfLines; ++i) {
+            for (int j = 0; j < numberOfPoints; ++j) {
+                randomNumbersTab[i][j] = (float) Math.random() * 100f;
+            }
+        }
+    }
+
+    /*******
+     * 图表数据初始化
+     */
+    private void generateData() {
+
+        List<Line> lines = new ArrayList<Line>();
+        List<AxisValue> axisValues = new ArrayList<>();//创建x轴数据
+        for (int i = 0; i < numberOfLines; ++i) {
+
+
+
+            List<PointValue> values = new ArrayList<PointValue>();
+            for (int j = 0; j < numberOfPoints; ++j) {
+                values.add(new PointValue(j, randomNumbersTab[i][j]));
+                //i仅1次时
+                axisValues.add(new AxisValue(i).setLabel(xValues[i]+","+randomNumbersTab[i][j]+"人"));
+            }
+
+            Line line = new Line(values);
+            line.setColor(ChartUtils.COLORS[i]);
+            line.setShape(shape);
+            line.setCubic(isCubic);
+            line.setFilled(isFilled);
+            line.setHasLabels(hasLabels);
+            line.setHasLabelsOnlyForSelected(hasLabelForSelected);
+            line.setHasLines(hasLines);
+            line.setHasPoints(hasPoints);
+//            line.setHasGradientToTransparent(hasGradientToTransparent);
+            if (pointsHaveDifferentColor) {
+                line.setPointColor(ChartUtils.COLORS[(i + 1) % ChartUtils.COLORS.length]);
+            }
+            lines.add(line);
+        }
+
+        data = new LineChartData(lines);
+
+        if (hasAxes) {
+            Axis axisX = new Axis(axisValues);
+            Axis axisY = new Axis().setHasLines(true);
+            if (hasAxesNames) {
+                axisX.setName("Axis X");
+                axisY.setName("Axis Y");
+            }
+            data.setAxisXBottom(axisX);
+            data.setAxisYLeft(axisY);
+        } else {
+            data.setAxisXBottom(null);
+            data.setAxisYLeft(null);
+        }
+
+        chart.setZoomEnabled(false);
+        chart.setValueSelectionEnabled(hasLabelForSelected);
+        data.setBaseValue(Float.NEGATIVE_INFINITY);
+        chart.setLineChartData(data);
+
+    }
+
 }

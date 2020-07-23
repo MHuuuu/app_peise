@@ -187,12 +187,11 @@
         android:layout_height="wrap_content"
         android:gravity="center">
 
-        <VideoView
+        <com.dou361.ijkplayer.widget.IjkVideoView
             android:id="@+id/mVideo"
             android:layout_width="375dp"
-            android:layout_height="220dp">
-
-        </VideoView>
+            android:layout_height="220dp"
+            android:background="@drawable/radiobutton_background_checked" />
     </RelativeLayout>
 
 </LinearLayout>

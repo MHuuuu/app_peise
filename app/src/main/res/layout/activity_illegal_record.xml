@@ -230,40 +230,39 @@
                             android:layout_alignTop="@id/rg_date_switch"
                             android:layout_alignBottom="@id/rg_date_switch"
                             android:layout_alignParentRight="true"
-                            android:gravity="center"
-                            android:background="@drawable/button_date_select">
+                            android:background="@drawable/button_date_select"
+                            android:gravity="center">
 
                             <TextView
                                 android:id="@+id/data_picker_tv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="15sp"
+                                android:text="2020.05.30"
                                 android:textColor="#12122C"
-                                android:text="2020.05.30" />
+                                android:textSize="15sp" />
 
                             <ImageView
                                 android:layout_width="14dp"
                                 android:layout_height="17dp"
-                                android:layout_toRightOf="@id/data_picker_tv"
                                 android:layout_alignTop="@id/data_picker_tv"
                                 android:layout_alignBottom="@id/data_picker_tv"
                                 android:layout_marginLeft="6dp"
-                                android:src="@mipmap/a_down_2">
-                            </ImageView>
+                                android:layout_toRightOf="@id/data_picker_tv"
+                                android:src="@mipmap/a_down_2"></ImageView>
                         </RelativeLayout>
 
-<!--                        <Button-->
-<!--                            android:id="@+id/btn_date_picker"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="36dp"-->
-<!--                            android:layout_alignTop="@id/rg_date_switch"-->
-<!--                            android:layout_alignBottom="@id/rg_date_switch"-->
-<!--                            android:layout_alignParentRight="true"-->
-<!--                            android:textSize="14sp"-->
-<!--                            android:textColor="#12122C"-->
-<!--                            android:text="2020.05.30"-->
-<!--                            android:background="@drawable/button_date_select">-->
-<!--                        </Button>-->
+                        <!--                        <Button-->
+                        <!--                            android:id="@+id/btn_date_picker"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="36dp"-->
+                        <!--                            android:layout_alignTop="@id/rg_date_switch"-->
+                        <!--                            android:layout_alignBottom="@id/rg_date_switch"-->
+                        <!--                            android:layout_alignParentRight="true"-->
+                        <!--                            android:textSize="14sp"-->
+                        <!--                            android:textColor="#12122C"-->
+                        <!--                            android:text="2020.05.30"-->
+                        <!--                            android:background="@drawable/button_date_select">-->
+                        <!--                        </Button>-->
 
                     </RelativeLayout>
 
@@ -273,15 +272,215 @@
                         android:layout_marginTop="17dp"
                         android:background="@drawable/card_shape">
 
-                        <ImageView
-                            android:id="@+id/imageView3"
+                        <lecho.lib.hellocharts.view.LineChartView
+                            android:id="@+id/line_chart_time"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:adjustViewBounds="true"
-                            android:src="@mipmap/test_peisp_2" />
+                            android:layout_height="150dp"
+                            android:background="@drawable/right_border" />
 
                     </RelativeLayout>
 
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/card_shape"
+                        android:paddingStart="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_day_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape">
+
+                            <TextView
+                                android:id="@+id/textView14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="日违规人数"
+                                android:textColor="@color/Grey_900" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="17dp"
+                                android:background="@drawable/card_shape">
+
+                                <TextView
+                                    android:id="@+id/textView13"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="28"
+                                    android:textSize="36sp" />
+
+                                <TextView
+                                    android:id="@+id/textView16"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/textView13"
+                                    android:layout_toRightOf="@id/textView13"
+                                    android:text="人"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_day_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@id/rl_day_num"
+                            android:background="@drawable/card_shape">
+
+                            <TextView
+                                android:id="@+id/textView15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="日违规率"
+                                android:textColor="@color/Grey_900" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="17dp"
+                                android:background="@drawable/card_shape">
+
+                                <TextView
+                                    android:id="@+id/textView17"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="11"
+                                    android:textSize="36sp" />
+
+                                <TextView
+                                    android:id="@+id/textView18"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/textView17"
+                                    android:layout_toRightOf="@id/textView17"
+                                    android:text="%"
+                                    android:textSize="18sp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/card_shape"
+                        android:paddingStart="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_day_num_n"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/card_shape">
+
+                            <TextView
+                                android:id="@+id/textView19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="与前日相比"
+                                android:textColor="@color/Grey_500" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="17dp"
+                                android:background="@drawable/card_shape">
+
+                                <TextView
+                                    android:id="@+id/textView20"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2"
+                                    android:textColor="@color/material_deep_teal_20"
+                                    android:textSize="36sp" />
+
+                                <TextView
+                                    android:id="@+id/textView21"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/textView20"
+                                    android:layout_toRightOf="@id/textView20"
+                                    android:text="人"
+                                    android:textColor="@color/material_deep_teal_20"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:id="@+id/imageView"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/textView20"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentBottom="false"
+                                    android:layout_toRightOf="@id/textView21"
+                                    android:scaleType="centerInside"
+                                    app:srcCompat="@mipmap/a_down_1" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_day_rate_n"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@id/rl_day_num_n"
+                            android:background="@drawable/card_shape">
+
+                            <TextView
+                                android:id="@+id/textView22"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="与前日相比"
+                                android:textColor="@color/Grey_500" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="17dp"
+                                android:background="@drawable/card_shape">
+
+                                <TextView
+                                    android:id="@+id/textView23"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="8"
+                                    android:textColor="@color/material_deep_teal_20"
+                                    android:textSize="36sp" />
+
+                                <TextView
+                                    android:id="@+id/textView24"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/textView23"
+                                    android:layout_toRightOf="@id/textView23"
+                                    android:text="%"
+                                    android:textColor="@color/material_deep_teal_20"
+                                    android:textSize="18sp" />
+
+                                <ImageView
+                                    android:id="@+id/imageView_1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@id/textView23"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentBottom="false"
+                                    android:layout_toRightOf="@id/textView24"
+                                    android:scaleType="centerInside"
+                                    app:srcCompat="@mipmap/a_down_1" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
                 </LinearLayout>
 
             </RelativeLayout>

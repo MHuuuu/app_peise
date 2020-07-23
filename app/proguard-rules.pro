@@ -23,3 +23,13 @@
 -keep class cn.pedant.SweetAlert.Rotate3dAnimation {
   public <init>(...);
 }
+
+#下面是直播(ijkplayer)相关的
+-keep class simijkplayer.**{
+    public <fields>;
+    public <methods>;
+}
+-keep class tv.danmaku.ijk.media.**{
+    <fields>;
+    <methods>;
+}
