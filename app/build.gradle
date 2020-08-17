@@ -20,11 +20,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-        }
-    }
 }
 
 dependencies {
@@ -51,4 +46,6 @@ dependencies {
     implementation 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.8'
     
     implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
 }

@@ -468,9 +468,7 @@
                                     android:text="正常到岗"
                                     android:textSize="14sp" />
                             </RelativeLayout>
-
                         </LinearLayout>
-
                     </RelativeLayout>
 
                     <lecho.lib.hellocharts.view.ColumnChartView
