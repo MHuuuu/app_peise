@@ -30,4 +30,5 @@
     <color name="execute_button">#F25555</color>
     <color name="titlebar_bg_color">#6D6D6D</color>
     <color name="font_color">#222222</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>

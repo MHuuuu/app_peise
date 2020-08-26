@@ -5,13 +5,13 @@
 5    android:versionName="1.1" >
 6
 7    <uses-sdk
-7-->/Users/chenyang/AndroidStudioProjects/app_peise/library/src/main/AndroidManifest.xml:6:1-42
-8        android:minSdkVersion="9"
-8-->/Users/chenyang/AndroidStudioProjects/app_peise/library/src/main/AndroidManifest.xml:6:1-42
-9        android:targetSdkVersion="17" />
-9-->/Users/chenyang/AndroidStudioProjects/app_peise/library/src/main/AndroidManifest.xml:6:11-40
+7-->D:\Android\Projects\PEISP\library\src\main\AndroidManifest.xml:6:1-42
+8        android:minSdkVersion="14"
+8-->D:\Android\Projects\PEISP\library\src\main\AndroidManifest.xml:6:1-42
+9        android:targetSdkVersion="29" />
+9-->D:\Android\Projects\PEISP\library\src\main\AndroidManifest.xml:6:11-40
 10
 11    <application />
-11-->/Users/chenyang/AndroidStudioProjects/app_peise/library/src/main/AndroidManifest.xml:8:1-16
+11-->D:\Android\Projects\PEISP\library\src\main\AndroidManifest.xml:8:1-16
 12
 13</manifest>

@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.bigkoo.pickerview.builder.TimePickerBuilder;
 import com.bigkoo.pickerview.listener.CustomListener;
@@ -43,6 +44,7 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
     private TextView mDataPickerTv;
     private TraceListAdapter adapter;
 
+//    日期选择器
     private TimePickerView pvCustomTime;
     private RelativeLayout mRlGoToIllWorker;
 
@@ -96,6 +98,7 @@ public class IllegalRecordActivity extends AppCompatActivity implements View.OnC
         mBtnDatePicker = (RelativeLayout) findViewById(R.id.btn_date_picker);
         mDataPickerTv = (TextView) findViewById(R.id.data_picker_tv);
         mRlGoToIllWorker = (RelativeLayout) findViewById(R.id.rl_go_to_ill_worker);
+
 
 
         chart = (LineChartView) findViewById(R.id.line_chart_time);
